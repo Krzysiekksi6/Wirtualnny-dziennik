@@ -20,6 +20,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             }
-        },5000);
+        },TIME_OUT_SPLASH);
     }
 }
