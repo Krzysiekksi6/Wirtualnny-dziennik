@@ -33,6 +33,7 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
         titleTextView = findViewById(R.id.title_text_view);
         registerTextView = findViewById(R.id.register_text_view);
         forgotPasswordTextView = findViewById(R.id.forgot_password_text_view);
@@ -42,10 +43,13 @@ public class LoginActivity extends AppCompatActivity {
         passwordEditText = findViewById(R.id.password_edit_text);
         mAuth = FirebaseAuth.getInstance();
 
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("message");
 
-        myRef.setValue("Hello, World!");
+//        FirebaseDatabase database = FirebaseDatabase.getInstance();
+//        DatabaseReference myRef = database.getReference("message");
+//
+//        myRef.setValue("Hello, World!");
+
+
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,11 +57,8 @@ public class LoginActivity extends AppCompatActivity {
 
                 String username = userEditText.getText().toString();
                 String password = passwordEditText.getText().toString();
-                if (TextUtils.isEmpty(username) || TextUtils.isEmpty(password)) {
-                    Toast.makeText(getApplicationContext(), "Enter email and password",
-                            Toast.LENGTH_LONG).show();
-                    return;
-                }
+
+
                 mAuth.signInWithEmailAndPassword(username, password)
                         .addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
                             @Override
@@ -81,17 +82,20 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
+
+
+
     @Override
     protected void onStart() {
         super.onStart();
         FirebaseUser currentUser = mAuth.getCurrentUser();
         if (currentUser != null) {
-            updateUI(currentUser);
+//            updateUI(currentUser);
         }
     }
 
     public void updateUI(FirebaseUser currentUser) {
-        Intent profileIntent = new Intent(this, RegisterActivity.class);
+        Intent profileIntent = new Intent(this, MainActivity2.class);
         profileIntent.putExtra("email", currentUser.getEmail());
         startActivity(profileIntent);
     }
