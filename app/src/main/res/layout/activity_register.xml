@@ -8,7 +8,7 @@
     tools:context=".RegisterActivity">
 
     <EditText
-        android:id="@+id/editTextTextPersonName5"
+        android:id="@+id/location_edit_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="91dp"
@@ -24,10 +24,10 @@
         android:textColorHint="@color/textColor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3" />
+        app:layout_constraintTop_toBottomOf="@+id/phone_edit_text" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName3"
+        android:id="@+id/phone_edit_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="91dp"
@@ -43,10 +43,10 @@
         android:textColorHint="@color/textColor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName4" />
+        app:layout_constraintTop_toBottomOf="@+id/name_edit_text" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName4"
+        android:id="@+id/name_edit_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="91dp"
@@ -62,10 +62,10 @@
         android:textColorHint="@color/textColor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+        app:layout_constraintTop_toBottomOf="@+id/password_edit_text" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/password_edit_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="91dp"
@@ -81,23 +81,23 @@
         android:textColorHint="@color/textColor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/email_edit_text" />
 
     <CheckBox
-        android:id="@+id/checkBox2"
+        android:id="@+id/professor_check_box"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="96dp"
-        android:text="Teacher"
+        android:text="Professor"
         android:textColor="@color/textColor"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/checkBox"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintStart_toEndOf="@+id/student_check_box"
+        app:layout_constraintTop_toBottomOf="@+id/avatar_image_view" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/avatar_image_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="149dp"
@@ -110,7 +110,7 @@
         tools:srcCompat="@tools:sample/avatars" />
 
     <CheckBox
-        android:id="@+id/checkBox"
+        android:id="@+id/student_check_box"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="91dp"
@@ -118,12 +118,12 @@
         android:layout_marginEnd="36dp"
         android:text="Student"
         android:textColor="@color/textColor"
-        app:layout_constraintEnd_toStartOf="@+id/checkBox2"
+        app:layout_constraintEnd_toStartOf="@+id/professor_check_box"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toBottomOf="@+id/avatar_image_view" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/email_edit_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="91dp"
@@ -139,10 +139,10 @@
         android:textColorHint="@color/textColor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox2" />
+        app:layout_constraintTop_toBottomOf="@+id/professor_check_box" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/register_button"
         android:layout_width="200dp"
         android:layout_height="56dp"
         android:layout_marginBottom="64dp"
