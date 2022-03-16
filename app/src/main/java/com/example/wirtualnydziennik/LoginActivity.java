@@ -98,6 +98,10 @@ public class LoginActivity extends AppCompatActivity {
         Intent profileIntent = new Intent(this, MainActivity2.class);
         profileIntent.putExtra("email", currentUser.getEmail());
         startActivity(profileIntent);
+        //TODO check (isStudent? or isProfessor?)
+        if (currentUser.getEmail().equals("profesor")) {
+
+        }
     }
 }
 
