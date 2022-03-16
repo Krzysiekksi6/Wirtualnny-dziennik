@@ -1,6 +1,7 @@
 package com.example.wirtualnydziennik;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -14,6 +15,7 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText locationEditText, phoneEditText, nameEditText, passwordEditText, emailEditText;
     private CheckBox studentCheckBox, professorCheckBox;
     private Button registerButton;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -29,6 +31,8 @@ public class RegisterActivity extends AppCompatActivity {
         studentCheckBox = findViewById(R.id.student_check_box);
         professorCheckBox = findViewById(R.id.professor_check_box);
         registerButton = findViewById(R.id.register_button);
+
+
 
     }
 }
