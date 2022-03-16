@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "65014354726",
+    "firebase_url": "https://user-registration-9ecc0-default-rtdb.firebaseio.com",
+    "project_id": "user-registration-9ecc0",
+    "storage_bucket": "user-registration-9ecc0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:65014354726:android:aba8ce179a79d640c9e7e7",
+        "android_client_info": {
+          "package_name": "com.example.wirtualnydziennik"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "65014354726-7pgkugtior5ca6ig5q135snm8j6jlogj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.wirtualnydziennik",
+            "certificate_hash": "7f9005fd3ed643536ac69eb995cbb1c3e6d1366b"
+          }
+        },
+        {
+          "client_id": "65014354726-2phci58c2a5ipc00rpdvm2ud4j09hflu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAd2dhKKMC2LzoQ2CkmDTE4c-wAgbucYo8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "65014354726-2phci58c2a5ipc00rpdvm2ud4j09hflu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
