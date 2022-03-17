@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -20,6 +21,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             }
-        },5000);
+        },TIME_OUT_SPLASH);
     }
 }
