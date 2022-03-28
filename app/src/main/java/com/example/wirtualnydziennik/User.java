@@ -8,8 +8,9 @@ public class User {
     private String phoneNumber;
     private boolean isProfessor;
     private String lastName;
-    public User() {
-    }
+
+    public User() { }
+
     public User(String email, String password) {
         this.email = email;
         this.password = password;

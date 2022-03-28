@@ -4,7 +4,6 @@ import java.util.ArrayList;
 /*
 TODO
 Trzeba zrobic to samo co w klasie grade
-
  */
 
 
@@ -13,6 +12,9 @@ public class Student {
     private String lastName;
     private int age;
     private String whichClass;
+    private String email;
+
+
     ArrayList<Subject> listOfSubject = new ArrayList<>();
 
     public Student(String firstName, String lastName, int age, String whichClass) {
@@ -20,6 +22,9 @@ public class Student {
         this.lastName = lastName;
         this.age = age;
         this.whichClass = whichClass;
+    }
+
+    public void addToClass(){//przeszukiwanie przedmiotow ktore maja odopowiednie id i dodanie przedmietow dla tego ucznia
     }
 
     public String getFirstName() {
