@@ -26,6 +26,7 @@ public class LoginActivity extends AppCompatActivity {
     private TextView titleTextView, registerTextView, forgotPasswordTextView;
     private ImageView logoImageView;
     private Button loginButton;
+    private Button registerButton;
     private EditText userEditText, passwordEditText;
     private FirebaseAuth mAuth;
 
@@ -34,13 +35,13 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        registerTextView = findViewById(R.id.register_text_view);
         forgotPasswordTextView = findViewById(R.id.forgot_password_text_view);
         logoImageView = findViewById(R.id.avatar_image_view);
         loginButton = findViewById(R.id.login_button);
         userEditText = findViewById(R.id.user_edit_text);
         passwordEditText = findViewById(R.id.password_edit_text);
         mAuth = FirebaseAuth.getInstance();
+        registerButton = findViewById(R.id.reg_button);
 
 
 //        FirebaseDatabase database = FirebaseDatabase.getInstance();
@@ -79,6 +80,15 @@ public class LoginActivity extends AppCompatActivity {
                         });
             }
         });
+
+        registerButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+            Intent intent = new Intent(LoginActivity.this,RegisterActivity.class);
+            startActivity(intent);
+            }
+
+        });
     }
 
     @Override
@@ -99,5 +109,6 @@ public class LoginActivity extends AppCompatActivity {
 
         }
     }
+
 }
 

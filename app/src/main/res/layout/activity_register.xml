@@ -4,151 +4,173 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_gradnient"
+    android:background="#673AB7"
     tools:context=".RegisterActivity">
 
     <EditText
         android:id="@+id/location_edit_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="91dp"
-        android:layout_marginTop="11dp"
-        android:layout_marginEnd="111dp"
+        android:layout_width="214dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+
+        android:drawableLeft="@drawable/ic_home_white"
         android:ems="10"
         android:hint="Location"
         android:inputType="textPersonName"
-        android:drawableLeft="@drawable/ic_home_white"
-        android:textAlignment="center"
         android:minHeight="48dp"
+        android:textAlignment="center"
         android:textColor="@color/textColor"
         android:textColorHint="@color/textColor"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.543"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/phone_edit_text" />
 
     <EditText
         android:id="@+id/phone_edit_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="91dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="111dp"
+        android:layout_width="214dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:drawableLeft="@drawable/ic_phone_white"
         android:ems="10"
         android:hint="Phone"
         android:inputType="phone"
-        android:drawableLeft="@drawable/ic_phone_white"
-        android:textAlignment="center"
         android:minHeight="48dp"
+        android:textAlignment="center"
         android:textColor="@color/textColor"
         android:textColorHint="@color/textColor"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name_edit_text" />
-
-    <EditText
-        android:id="@+id/name_edit_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="91dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="111dp"
-        android:ems="10"
-        android:hint="Name"
-        android:inputType="textPersonName"
-        android:drawableLeft="@drawable/ic_person_white"
-        android:textAlignment="center"
-        android:minHeight="48dp"
-        android:textColor="@color/textColor"
-        android:textColorHint="@color/textColor"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.543"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password_edit_text" />
 
     <EditText
+        android:id="@+id/name_edit_text"
+        android:layout_width="214dp"
+        android:layout_height="48dp"
+        android:drawableLeft="@drawable/ic_person_white"
+        android:ems="10"
+        android:hint="First name"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textAlignment="center"
+        android:textColor="@color/textColor"
+        android:textColorHint="@color/textColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.542"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.202" />
+
+    <EditText
+        android:id="@+id/last_name_edit_text"
+        android:layout_width="214dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:drawableLeft="@drawable/ic_person_white"
+        android:ems="10"
+        android:hint="Last name"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textAlignment="center"
+        android:textColor="@color/textColor"
+        android:textColorHint="@color/textColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.543"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_edit_text" />
+
+    <EditText
         android:id="@+id/password_edit_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="91dp"
-        android:layout_marginTop="13dp"
-        android:layout_marginEnd="111dp"
+        android:layout_width="214dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:drawableLeft="@drawable/ic_lock_white"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
-        android:drawableLeft="@drawable/ic_lock_white"
-        android:textAlignment="center"
         android:minHeight="48dp"
+        android:textAlignment="center"
         android:textColor="@color/textColor"
         android:textColorHint="@color/textColor"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.543"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/email_edit_text" />
 
-    <CheckBox
-        android:id="@+id/professor_check_box"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="96dp"
-        android:text="Professor"
-        android:textColor="@color/textColor"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/student_check_box"
-        app:layout_constraintTop_toBottomOf="@+id/avatar_image_view" />
-
-    <ImageView
-        android:id="@+id/avatar_image_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="149dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="134dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
-
-    <CheckBox
-        android:id="@+id/student_check_box"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="91dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="36dp"
-        android:text="Student"
-        android:textColor="@color/textColor"
-        app:layout_constraintEnd_toStartOf="@+id/professor_check_box"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/avatar_image_view" />
-
     <EditText
         android:id="@+id/email_edit_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="91dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="111dp"
+        android:layout_width="214dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="8dp"
+        android:drawableLeft="@drawable/ic_email_white"
         android:ems="10"
         android:hint="E-mail"
         android:inputType="textEmailAddress"
-        android:drawableLeft="@drawable/ic_email_white"
-        android:textAlignment="center"
         android:minHeight="48dp"
+        android:textAlignment="center"
         android:textColor="@color/textColor"
         android:textColorHint="@color/textColor"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.543"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/professor_check_box" />
+        app:layout_constraintTop_toBottomOf="@+id/last_name_edit_text" />
 
     <Button
         android:id="@+id/register_button"
         android:layout_width="200dp"
         android:layout_height="56dp"
-        android:layout_marginBottom="64dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#3EB489"
         android:text="REGISTER"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/create_an_account"
+        android:layout_width="431dp"
+        android:layout_height="71dp"
+        android:fontFamily="sans-serif-black"
+        android:lineSpacingExtra="10sp"
+        android:text="Create an account"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#FFFFFF"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:typeface="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.061" />
+
+    <RadioGroup
+        android:id="@+id/rg"
+        android:layout_width="180dp"
+        android:layout_height="94dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/location_edit_text">
+
+        <RadioButton
+            android:id="@+id/studentButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Student"
+            android:textColor="#FFFFFF" />
+
+        <RadioButton
+            android:id="@+id/profesorButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Profesor"
+            android:textColor="#FFFFFF" />
+    </RadioGroup>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
