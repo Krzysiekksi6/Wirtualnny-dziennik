@@ -118,7 +118,7 @@
         app:layout_constraintTop_toBottomOf="@+id/last_name_edit_text" />
 
     <Button
-        android:id="@+id/register_button"
+        android:id="@+id/choose_class"
         android:layout_width="200dp"
         android:layout_height="56dp"
         android:layout_marginBottom="16dp"

@@ -9,7 +9,6 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RadioButton;
@@ -53,7 +52,7 @@ public class RegisterActivity extends AppCompatActivity {
         profBut = findViewById(R.id.profesorButton);
         studentBut = findViewById(R.id.studentButton);
         avatarImageView = findViewById(R.id.avatar_image_view);
-        registerButton = findViewById(R.id.register_button);
+        registerButton = findViewById(R.id.choose_class);
         lastNameEditText = findViewById(R.id.last_name_edit_text);
 
         database = FirebaseDatabase.getInstance();
