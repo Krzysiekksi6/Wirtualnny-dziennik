@@ -43,7 +43,7 @@ public class LoginActivity extends AppCompatActivity {
         passwordEditText = findViewById(R.id.password_edit_text);
         mAuth = FirebaseAuth.getInstance();
 
-
+        /** Sending Hello world to realtime database */
 //        FirebaseDatabase database = FirebaseDatabase.getInstance();
 //        DatabaseReference myRef = database.getReference("message");
 //
@@ -92,7 +92,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void updateUI(FirebaseUser currentUser) {
-        Intent profileIntent = new Intent(this, MainActivity2.class);
+        Intent profileIntent = new Intent(this, RegisterActivity.class);
         profileIntent.putExtra("email", currentUser.getEmail());
         startActivity(profileIntent);
         //TODO check (isStudent? or isProfessor?)

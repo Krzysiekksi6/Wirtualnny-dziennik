@@ -7,6 +7,7 @@ public class User {
     private String location;
     private String phoneNumber;
     private boolean isProfessor;
+
     public User() {
     }
     public User(String email, String password) {
