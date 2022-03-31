@@ -3,13 +3,14 @@ package com.example.wirtualnydziennik;
 public class User {
     private String email;
     private String password;
-    private String fullName;
+    private String firstName;
     private String location;
     private String phoneNumber;
     private boolean isProfessor;
+    private String lastName;
 
-    public User() {
-    }
+    public User() { }
+
     public User(String email, String password) {
         this.email = email;
         this.password = password;
@@ -18,18 +19,19 @@ public class User {
     public User(String email, String password, String fullName, String location, String phoneNumber) {
         this.email = email;
         this.password = password;
-        this.fullName = fullName;
+        this.firstName = fullName;
         this.location = location;
         this.phoneNumber = phoneNumber;
     }
 
-    public User(String email, String password, String fullName, String location, String phoneNumber, boolean isProfessor) {
+    public User(String email, String password, String fullName, String lastName, String location, String phoneNumber, boolean isProfessor) {
         this.email = email;
         this.password = password;
-        this.fullName = fullName;
+        this.firstName = fullName;
         this.location = location;
         this.phoneNumber = phoneNumber;
         this.isProfessor = isProfessor;
+        this.lastName = lastName;
     }
 
     public String getEmail() {
@@ -49,11 +51,11 @@ public class User {
     }
 
     public String getFullName() {
-        return fullName;
+        return firstName;
     }
 
     public void setFullName(String fullName) {
-        this.fullName = fullName;
+        this.firstName = fullName;
     }
 
     public String getLocation() {

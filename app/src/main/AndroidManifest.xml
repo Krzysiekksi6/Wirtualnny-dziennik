@@ -10,6 +10,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WirtualnyDziennik">
         <activity
+            android:name=".DayDetail"
+            android:exported="true" />
+        <activity
+            android:name=".WeekActivity"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivityList"
+            android:exported="true" />
+        <activity
+            android:name=".FaqActivity"
+            android:exported="true" />
+        <activity
+            android:name=".AddStudentActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity2"
             android:exported="true" />
         <activity

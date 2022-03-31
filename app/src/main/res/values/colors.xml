@@ -9,4 +9,17 @@
     <color name="white">#FFFFFFFF</color>
     <color name="textColor">#FFF</color>
     <color name="barColor">#320b86</color>
+
+    <string-array name="colors" translatable="false">
+        <item>#99cc00</item>
+        <item>#33b5e5</item>
+        <item>#547bca</item>
+        <item>#9933cc</item>
+        <item>#669900</item>
+        <item>#aeb857</item>
+        <item>#cc0000</item>
+        <item>#df5948</item>
+        <item>#ff4444</item>
+        <item>#ff8800</item>
+    </string-array>
 </resources>
