@@ -10,21 +10,39 @@ Trzeba zrobic to samo co w klasie grade
 public class Student {
     private String firstName;
     private String lastName;
-    private int age;
+    private String birthDate;
     private String whichClass;
     private String email;
 
 
     ArrayList<Subject> listOfSubject = new ArrayList<>();
 
-    public Student(String firstName, String lastName, int age, String whichClass) {
+    public Student(String firstName, String lastName, String birthDate, String whichClass) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.age = age;
+        this.birthDate = birthDate;
         this.whichClass = whichClass;
+        attachSubjectList();
     }
 
     public void addToClass(){//przeszukiwanie przedmiotow ktore maja odopowiednie id i dodanie przedmietow dla tego ucznia
+    }
+
+    public void attachSubjectList(){
+        switch (whichClass){
+            case " 1  A ":
+                listOfSubject.add(new Subject("Fizyka","Marek"));
+                listOfSubject.add(new Subject("Matematyka","Kaziu"));
+                break;
+            case " 2  A ":
+                listOfSubject.add(new Subject("Geografia","Ziutek"));
+                listOfSubject.add(new Subject("Chemia","Kuba"));
+                break;
+            default:
+
+
+        }
+
     }
 
     public String getFirstName() {
@@ -43,12 +61,8 @@ public class Student {
         this.lastName = lastName;
     }
 
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
+    public String getBirthDate() {
+        return birthDate;
     }
 
     public String getWhichClass() {
@@ -59,6 +73,15 @@ public class Student {
         this.whichClass = whichClass;
     }
 
+    @Override
+    public String toString() {
+        return "Student{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", birthDate='" + birthDate + '\'' +
+                ", whichClass='" + whichClass + '\'' +
+                '}' + listOfSubject.toString();
+    }
 }
 
 

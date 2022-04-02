@@ -8,6 +8,7 @@ import android.os.Handler;
 
 public class MainActivity extends AppCompatActivity {
     private static int TIME_OUT_SPLASH = 4000;
+    static int idCounter=0;
     Handler handler = new Handler();
     @Override
     protected void onCreate(Bundle savedInstanceState) {

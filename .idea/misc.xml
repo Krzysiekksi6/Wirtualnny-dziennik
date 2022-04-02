@@ -5,18 +5,23 @@
       <map>
         <entry key="..\:/Users/krzys/Desktop/Android Development/Wirtualnydziennik/app/src/main/res/layout/activity_login.xml" value="0.3515625" />
         <entry key="..\:/Users/krzys/Desktop/Android Development/Wirtualnydziennik/app/src/main/res/layout/activity_main.xml" value="0.3375" />
+        <entry key="app/src/main/res/drawable-anydpi/ic_action_name.xml" value="0.2985" />
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2985" />
         <entry key="app/src/main/res/drawable/background_gradnient.xml" value="0.2015" />
         <entry key="app/src/main/res/drawable/button_shape.xml" value="0.2015" />
         <entry key="app/src/main/res/drawable/deeppurple500.xml" value="0.2015" />
         <entry key="app/src/main/res/drawable/ic_email_white.xml" value="0.2015" />
         <entry key="app/src/main/res/drawable/ic_home_white.xml" value="0.2015" />
         <entry key="app/src/main/res/drawable/ic_person_white.xml" value="0.2015" />
+        <entry key="app/src/main/res/drawable/ic_phone_white.xml" value="0.2985" />
         <entry key="app/src/main/res/drawable/radiousshape.xml" value="0.2015" />
         <entry key="app/src/main/res/layout/activity_add_student.xml" value="0.5" />
         <entry key="app/src/main/res/layout/activity_add_student2.xml" value="0.19375" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.19375" />
-        <entry key="app/src/main/res/layout/activity_register.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/activity_print_all_students.xml" value="0.19375" />
+        <entry key="app/src/main/res/layout/activity_register.xml" value="0.33" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2985" />
       </map>
     </option>
   </component>

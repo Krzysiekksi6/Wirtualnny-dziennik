@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.wirtualnydziennik">
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -10,8 +11,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WirtualnyDziennik">
         <activity
-            android:name=".AddStudentActivity"
+            android:name=".PrintAllStudents"
             android:exported="false" />
+        <activity
+            android:name=".AddStudentActivity"
+            android:exported="true" />
         <activity
             android:name=".MainActivity2"
             android:exported="true" />
