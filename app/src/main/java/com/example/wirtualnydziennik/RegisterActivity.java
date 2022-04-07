@@ -77,7 +77,7 @@ public class RegisterActivity extends AppCompatActivity {
                 //TODO Ogarnąc checkboxy student i profesor i zaimplemenować odpowiednia zależność if ---> zrobiłem
                 // TODO w konstruktorze User jest atrubut boolean isProfessor; ???
                 // TODO jesli checkobx jest klikniety na profesora to ustalamy w konstruktorze warotsc true
-                // TODO Prawdopodobnie do checkboxa trzeba dodać tą sama radioGrupe czy cos takiego zeby mozna było tylko jednego zaznaczyc
+                // TODO Prawdopodobnie do checkboxa trzeba dodać tą sama radioGrupe czy cos takiego zeby mozna było tylko jedna opcje zaznaczyc
                 // TODO w LOGIN ACTIVITY pod przyciskiem login masz register (text view) po nacisnieciu textview ma byc zmiana activity na Register Activity
                 // TODO najlepiej zrobic najprosteszym intentem ktorego masz w 108 linice kodu na dole
 

@@ -1,3 +1,130 @@
 <resources>
     <string name="app_name">Wirtualny dziennik</string>
+    <string name="faq_title">FAQ</string>
+
+    <string name="faq_first">Kiedy rozpoczyna sie semestr zimowy? <br> </br> - Zgodnie z Zarządzeniem nr 58/2021/2022 Rektora ANS Tarnow semestr
+    zimowy rozpoczyna sie z dniem 01.10.2021 roku.</string>
+
+    <string name="faq_second">Gdzie nalezy złozyc wniosek o wpis warunkowy ? <br> </br> - Zgodnie z Wytycznymi pani Rektor
+        wnioski o wpisy warunkowe kierujemy do dziekanatu danego wydzialu. </string>
+
+    <string name="faq_third">Czy od letniego semestru obowiazuja maseczki podczas zajec? <br> </br> - Zgodnie z Zarządzeniem nr 80/2021/2022 Rektora ANS Tarnow
+    od semestru letniego 2021/2022 nie ma obowiazku noszenia maseczek </string>
+
+    <string name="faq_fourth">Jaka jest maksymalna liczba studentow na kierunku Informatyka ? <br> </br> - Zgodnie z Zarządzeniem nr 24/2019/2020 Rektora PWSZ Tarnow
+    na kierunku Informatyka jest 120 miejsc.</string>
+
+    <string-array name="Main">
+        <item>Timetable</item>
+        <item>Subjects</item>
+        <item>Faculty</item>
+        <item>FAQ</item>
+    </string-array>
+
+    <string-array name="Description">
+        <item>Description 1</item>
+        <item>Description 2</item>
+        <item>Description 3</item>
+        <item>Description 4</item>
+    </string-array>
+
+    <string-array name="Week">
+        <item>Monday </item>
+        <item>Tuesday </item>
+        <item>Wednesday </item>
+        <item>Thursday </item>
+        <item>Friday </item>
+    </string-array>
+
+    <string-array name="Monday">
+        <item>fizyka</item>
+        <item>historia</item>
+        <item>geografia</item>
+        <item>informatyka</item>
+        <item>matematyka</item>
+        <item>wf</item>
+    </string-array>
+    <string-array name="Tuesday">
+        <item>fizyka</item>
+        <item>historia</item>
+        <item>geografia</item>
+        <item>informatyka</item>
+        <item>matematyka</item>
+        <item>wf</item>
+    </string-array>
+    <string-array name="Wednesday">
+        <item>fizyka</item>
+        <item>historia</item>
+        <item>geografia</item>
+        <item>informatyka</item>
+        <item>matematyka</item>
+        <item>wf</item>
+    </string-array>
+    <string-array name="Thursday">
+        <item>fizyka</item>
+        <item>historia</item>
+        <item>geografia</item>
+        <item>informatyka</item>
+        <item>matematyka</item>
+        <item>wf</item>
+    </string-array>
+    <string-array name="Friday">
+        <item>fizyka</item>
+        <item>historia</item>
+        <item>geografia</item>
+        <item>informatyka</item>
+        <item>matematyka</item>
+        <item>wf</item>
+    </string-array>
+
+    <string-array name="time1">
+        <item>8:55AM - 9:50AM</item>
+        <item>9:50AM - 10:45AM</item>
+        <item>10:45AM - 11:15AM</item>
+        <item>11:15AM - 1:05PM</item>
+        <item>1:05PM - 2:00PM</item>
+        <item>2:00PM - 2:55PM</item>
+        <item>2:55PM - 4:45PM</item>
+    </string-array>
+
+    <string-array name="time2">
+        <item>8:55AM - 9:50AM</item>
+        <item>9:50AM - 10:45AM</item>
+        <item>10:45AM - 11:15AM</item>
+        <item>11:15AM - 12:10PM</item>
+        <item>12:10PM - 1:05PM</item>
+        <item>1:05PM - 2:00PM</item>
+        <item>2:00PM - 3:50PM</item>
+    </string-array>
+
+    <string-array name="time3">
+        <item>8:55AM - 9:50AM</item>
+        <item>9:50AM - 10:45AM</item>
+        <item>10:45AM - 11:15AM</item>
+        <item>11:15AM - 12:10PM</item>
+        <item>12:10PM - 1:05PM</item>
+        <item>1:05PM - 2:00PM</item>
+        <item>2:00PM - 3:50PM</item>
+    </string-array>
+
+    <string-array name="time4">
+        <item>8:55AM - 9:50AM</item>
+        <item>9:50AM - 10:45AM</item>
+        <item>10:45AM - 11:15AM</item>
+        <item>11:15AM - 12:10PM</item>
+        <item>12:10PM - 1:05PM</item>
+        <item>1:05PM - 2:00PM</item>
+        <item>2:00PM - 3:50PM</item>
+    </string-array>
+
+    <string-array name="time5">
+        <item>8:55AM - 10:45AM</item>
+        <item>10:45AM - 11:15AM</item>
+        <item>11:15AM - 12:10PM</item>
+        <item>12:10PM - 1:05PM</item>
+        <item>1:05PM - 2:00PM</item>
+        <item>2:00PM - 3:50PM</item>
+    </string-array>
+
+
 </resources>

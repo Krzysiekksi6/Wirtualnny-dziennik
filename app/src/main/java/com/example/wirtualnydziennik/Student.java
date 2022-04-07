@@ -11,11 +11,13 @@ public class Student {
     private String firstName;
     private String lastName;
     private String birthDate;
+    private int age;
     private String whichClass;
     private String email;
 
 
     ArrayList<Subject> listOfSubject = new ArrayList<>();
+
 
     public Student(String firstName, String lastName, String birthDate, String whichClass) {
         this.firstName = firstName;
@@ -65,6 +67,14 @@ public class Student {
         return birthDate;
     }
 
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
     public String getWhichClass() {
         return whichClass;
     }
@@ -72,6 +82,7 @@ public class Student {
     public void setWhichClass(String whichClass) {
         this.whichClass = whichClass;
     }
+
 
     @Override
     public String toString() {
@@ -82,6 +93,7 @@ public class Student {
                 ", whichClass='" + whichClass + '\'' +
                 '}' + listOfSubject.toString();
     }
+
 }
 
 

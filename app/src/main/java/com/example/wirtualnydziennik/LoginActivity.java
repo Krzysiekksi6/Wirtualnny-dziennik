@@ -43,7 +43,7 @@ public class LoginActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         registerButton = findViewById(R.id.reg_button);
 
-
+        /** Sending Hello world to realtime database */
 //        FirebaseDatabase database = FirebaseDatabase.getInstance();
 //        DatabaseReference myRef = database.getReference("message");
 //
@@ -68,6 +68,8 @@ public class LoginActivity extends AppCompatActivity {
                                     Log.d("sucess", "signInWithEmail:success");
                                     FirebaseUser user = mAuth.getCurrentUser();
                                     updateUI(user);
+                                    Intent intent = new Intent(LoginActivity.this,MainActivityList.class);
+                                    startActivity(intent);
                                 } else {
                                     // If sign in fails, display a message to the user.
                                     String asd = "fail";
@@ -101,7 +103,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void updateUI(FirebaseUser currentUser) {
-        Intent profileIntent = new Intent(this, MainActivity2.class);
+        Intent profileIntent = new Intent(this, RegisterActivity.class);
         profileIntent.putExtra("email", currentUser.getEmail());
         startActivity(profileIntent);
         //TODO check (isStudent? or isProfessor?)

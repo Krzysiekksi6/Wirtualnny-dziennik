@@ -19,6 +19,7 @@ public class Subject{
     private String whichClasId;
     ArrayList<Grade> listOfGrades = new ArrayList<>();
     Grade grade = new Grade();
+
     public Subject(String nameOfSubjec, String instructor, String whichClasId) {
         this.nameOfSubjec = nameOfSubjec;
         this.instructor = instructor;
@@ -30,10 +31,13 @@ public class Subject{
         this.instructor = instructor;
     }
 
+
+
     public void addGrade(){//Widziałbym to jakie takie activity gdzie wpisujesz po koleji to edit textu a potem to pobierasz pod przycieskiem
 
 
     }
+
 
     public String getNameOfSubjec() {
         return nameOfSubjec;
@@ -58,4 +62,5 @@ public class Subject{
                 ", instructor='" + instructor + '\'' +
                 '}';
     }
+
 }
