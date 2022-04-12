@@ -28,14 +28,14 @@ public class MainActivityList extends AppCompatActivity {
 
 
         initToolbar();
-       setupListView();
+        setupListView();
 
     }
 
 
     private void initToolbar() {
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("WD APP");
+        getSupportActionBar().setTitle("WD Application");
     }
 
     private void setupListView(){
@@ -55,7 +55,7 @@ public class MainActivityList extends AppCompatActivity {
                         break;
                     }
                     case 1: {
-                        Intent intent = new Intent(MainActivityList.this, LoginActivity.class);
+                        Intent intent = new Intent(MainActivityList.this, SubjectActivity.class);
                         startActivity(intent);
                         break;
                     }

@@ -20,86 +20,82 @@ import androidx.appcompat.widget.Toolbar;
 
 import com.example.wirtualnydziennik.Utils.LetterImageView;
 
-public class WeekActivity extends AppCompatActivity {
+public class SubjectActivity extends AppCompatActivity {
+
     private Toolbar toolbar;
     private ListView listView;
-    public static SharedPreferences sharedPreferences;
-    public static String SEL_DAY;
+    private String[] subjects;
+    public static SharedPreferences subjectPreferences;
+    public static String SUB_PREF;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_week);
+        setContentView(R.layout.activity_subject);
+
         setupUIViews();
         initToolbar();
         setupListView();
+
     }
 
     private void setupUIViews(){
-        toolbar = findViewById(R.id.ToolbarWeek);
-        listView = (ListView) findViewById(R.id.lvWeek);
-        sharedPreferences = getSharedPreferences("MY_DAY",MODE_PRIVATE);
+        toolbar = findViewById(R.id.ToolbarSubject);
+        listView = (ListView) findViewById(R.id.lvSubject);
+        subjectPreferences = getSharedPreferences("Subjects", MODE_PRIVATE);
 
     }
 
     private void initToolbar() {
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Week");
+        getSupportActionBar().setTitle("Subject");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
-    private void setupListView(){
-        String[] week = getResources().getStringArray(R.array.Week);
-        // int resource
-        WeekAdapter adapter = new WeekAdapter(this,R.layout.activity_week_single_item, week);
+    private void setupListView() {
+        subjects = getResources().getStringArray(R.array.Subjects);
 
-        listView.setAdapter(adapter);
+        SubjectAdapter subjectAdapter = new SubjectAdapter(this, R.layout.subject_single_item, subjects);
+        listView.setAdapter(subjectAdapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 switch (position) {
                     case 0: {
-                        startActivity(new Intent(WeekActivity.this, DayDetail.class));
-                        sharedPreferences.edit().putString(SEL_DAY, "Monday").apply();
+                        subjectPreferences.edit().putString(SUB_PREF,"Algorithms").apply();
+                        Intent intent = new Intent(SubjectActivity.this, SubjectDetail.class);
+                        startActivity(intent);
                         break;
                     }
                     case 1: {
-                        startActivity(new Intent(WeekActivity.this, DayDetail.class));
-                        sharedPreferences.edit().putString(SEL_DAY, "Tuesday").apply();
-                        break;
+                        subjectPreferences.edit().putString(SUB_PREF,"Data").apply();
+                        Intent intent = new Intent(SubjectActivity.this, SubjectDetail.class);
+                        startActivity(intent);
                     }
-                    case 2: {
-                        startActivity(new Intent(WeekActivity.this, DayDetail.class));
-                        sharedPreferences.edit().putString(SEL_DAY, "Wednesday").apply();
-                        break;
-                    }
-                    case 3: {
-                        startActivity(new Intent(WeekActivity.this, DayDetail.class));
-                        sharedPreferences.edit().putString(SEL_DAY, "Thursday").apply();
-                        break;
-                    }
-                    case 4: {
-                        startActivity(new Intent(WeekActivity.this, DayDetail.class));
-                        sharedPreferences.edit().putString(SEL_DAY, "Friday").apply();
-                        break;
-                    }
-                    default:break;
 
+                    case 2:{
+                        subjectPreferences.edit().putString(SUB_PREF,"Structures").apply();
+                        Intent intent = new Intent(SubjectActivity.this, SubjectDetail.class);
+                        startActivity(intent);
+                    }
+
+                    default:
+                        break;
                 }
             }
         });
-
     }
 
-    public class WeekAdapter extends ArrayAdapter{
+    public class SubjectAdapter extends ArrayAdapter {
 
         private int resource;
         private LayoutInflater layoutInflater;
-        private String[] week = new String[]{};
+        private String[] subject = new String[]{};
 
-        public WeekAdapter(Context context, int resource, String[] objects) {
+        public SubjectAdapter(Context context, int resource, String[] objects) {
             super(context, resource, objects);
             this.resource = resource;
-            this.week = objects;
+            this.subject = objects;
             layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         }
 
@@ -110,20 +106,21 @@ public class WeekActivity extends AppCompatActivity {
             if(convertView == null) {
                 holder = new ViewHolder();
                 convertView = layoutInflater.inflate(resource,null);
-                holder.ivLogo = (LetterImageView) convertView.findViewById(R.id.ivLetter);
-                holder.tvWeek = (TextView) convertView.findViewById(R.id.tvWeek); //todo
+                holder.ivLogo = (LetterImageView) convertView.findViewById(R.id.ivLetterSubject);
+                holder.tvSubject = (TextView) convertView.findViewById(R.id.tvSubject);
                 convertView.setTag(holder);
             } else {
                 holder = (ViewHolder) convertView.getTag();
             }
             holder.ivLogo.setOval(true);
-            holder.ivLogo.setLetter(week[position].charAt(0));
-            holder.tvWeek.setText(week[position]);
+            holder.ivLogo.setLetter(subjects[position].charAt(0));
+            holder.tvSubject.setText(subjects[position]);
             return convertView;
         }
         class ViewHolder{
+            public TextView tvSubject;
             private LetterImageView ivLogo;
-            private TextView tvWeek;
+
 
         }
     }
@@ -137,4 +134,5 @@ public class WeekActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
 }

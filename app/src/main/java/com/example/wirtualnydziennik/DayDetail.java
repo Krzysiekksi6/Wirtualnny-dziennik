@@ -82,7 +82,7 @@ public class DayDetail extends AppCompatActivity {
             PreferredTime = Time5;
         }
 
-        SimpleAdapter simpleAdapter = new SimpleAdapter(DayDetail.this,PreferredDay,PreferredTime);
+        SimpleAdapter simpleAdapter = new SimpleAdapter(DayDetail.this, PreferredDay, PreferredTime);
         listView.setAdapter(simpleAdapter);
     }
     public class SimpleAdapter extends BaseAdapter {

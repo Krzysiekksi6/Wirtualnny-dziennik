@@ -1,10 +1,10 @@
 package com.example.wirtualnydziennik;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
     private static int TIME_OUT_SPLASH = 4000;

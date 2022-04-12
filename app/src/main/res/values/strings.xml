@@ -37,44 +37,44 @@
     </string-array>
 
     <string-array name="Monday">
-        <item>fizyka</item>
-        <item>historia</item>
-        <item>geografia</item>
-        <item>informatyka</item>
-        <item>matematyka</item>
-        <item>wf</item>
+        <item>Linear Algebra</item>
+        <item>Numerical Methods in Technical Calculations</item>
+        <item>Dynamic Systems Modelling</item>
+        <item>Algorithms and Data Structures</item>
+        <item>Programming of Mobile Systems</item>
+        <item>Big Data and Data Warehouses</item>
     </string-array>
     <string-array name="Tuesday">
-        <item>fizyka</item>
-        <item>historia</item>
-        <item>geografia</item>
-        <item>informatyka</item>
-        <item>matematyka</item>
-        <item>wf</item>
+        <item>Web Technologies</item>
+        <item>Operations Research</item>
+        <item>Programming of Distributed Systems II</item>
+        <item>Linear Algebra</item>
+        <item>Algorithms and Data Structures</item>
+        <item>WF</item>
     </string-array>
     <string-array name="Wednesday">
-        <item>fizyka</item>
-        <item>historia</item>
-        <item>geografia</item>
-        <item>informatyka</item>
-        <item>matematyka</item>
-        <item>wf</item>
+        <item>Programming of Mobile Systems</item>
+        <item>Programming of Mobile Systems</item>
+        <item>Numerical Methods in Technical Calculations</item>
+        <item>Mathematical Analysis</item>
+        <item>Dynamic Systems Modelling</item>
+        <item>Occupational Health and Safety Training</item>
     </string-array>
     <string-array name="Thursday">
-        <item>fizyka</item>
-        <item>historia</item>
-        <item>geografia</item>
-        <item>informatyka</item>
-        <item>matematyka</item>
-        <item>wf</item>
+        <item>Web Technologies</item>
+        <item>Operations Research</item>
+        <item>Programming of Distributed Systems II</item>
+        <item>Linear Algebra</item>
+        <item>Algorithms and Data Structures</item>
+        <item>WF</item>
     </string-array>
     <string-array name="Friday">
-        <item>fizyka</item>
-        <item>historia</item>
-        <item>geografia</item>
-        <item>informatyka</item>
-        <item>matematyka</item>
-        <item>wf</item>
+        <item>Linear Algebra</item>
+        <item>Numerical Methods in Technical Calculations</item>
+        <item>Dynamic Systems Modelling</item>
+        <item>Algorithms and Data Structures</item>
+        <item>Programming of Mobile Systems</item>
+        <item>Big Data and Data Warehouses</item>
     </string-array>
 
     <string-array name="time1">
@@ -124,6 +124,52 @@
         <item>12:10PM - 1:05PM</item>
         <item>1:05PM - 2:00PM</item>
         <item>2:00PM - 3:50PM</item>
+    </string-array>
+
+    <string-array name="Subjects">
+        <item>Data Structures and Algorithms</item>
+        <item>Data Structures and Algorithms</item>
+        <item>Data Structures and Algorithms</item>
+    </string-array>
+
+    <string-array name="Algorithms">
+        <item>Lorem ipsum dolor sit amet.</item>
+        <item>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</item>
+        <item>Lorem ipsum dolor sit amet.</item>
+        <item>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, soluta.</item>
+        <item>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque fugit illum ipsa quam voluptatem. Eius, nulla provident? Accusamus, ad amet, consequuntur, corporis impedit ipsum libero natus officiis quis rem sed.</item>
+        <item>Lorem ipsum dolor sit amet.</item>
+        <item>Lorem ipsum dolor sit amet.</item>
+    </string-array>
+
+    <string-array name="Data">
+        <item>Lorem ipsum dolor sit amet.</item>
+        <item>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</item>
+        <item>Lorem ipsum dolor sit amet.</item>
+        <item>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, soluta.</item>
+        <item>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque fugit illum ipsa quam voluptatem. Eius, nulla provident? Accusamus, ad amet, consequuntur, corporis impedit ipsum libero natus officiis quis rem sed.</item>
+        <item>Lorem ipsum dolor sit amet.</item>
+        <item>Lorem ipsum dolor sit amet.</item>
+    </string-array>
+
+    <string-array name="Structures">
+        <item>Lorem ipsum dolor sit amet.</item>
+        <item>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</item>
+        <item>Lorem ipsum dolor sit amet.</item>
+        <item>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, soluta.</item>
+        <item>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque fugit illum ipsa quam voluptatem. Eius, nulla provident? Accusamus, ad amet, consequuntur, corporis impedit ipsum libero natus officiis quis rem sed.</item>
+        <item>Lorem ipsum dolor sit amet.</item>
+        <item>Lorem ipsum dolor sit amet.</item>
+    </string-array>
+
+    <string-array name="titles">
+        <item>Unit1</item>
+        <item>Unit2</item>
+        <item>Unit3</item>
+        <item>Unit4</item>
+        <item>Unit5</item>
+        <item> Recommended books </item>
+        <item> Other books </item>
     </string-array>
 
 
