@@ -119,13 +119,13 @@ public class MainActivityList extends AppCompatActivity {
             description.setText(descriptionArray[position]);
 
             if(titleArray[position].equalsIgnoreCase("Timetable")){
-                imageView.setImageResource(R.drawable.timetable);
+                imageView.setImageResource(R.drawable.schedulde_logo);
             }else if(titleArray[position].equalsIgnoreCase("Subjects")){
-                imageView.setImageResource(R.drawable.timetable);
-            }else if(titleArray[position].equalsIgnoreCase("Faculty")){
-                imageView.setImageResource(R.drawable.logo);
+                imageView.setImageResource(R.drawable.books_logo);
+            }else if(titleArray[position].equalsIgnoreCase("Grades")){
+                imageView.setImageResource(R.drawable.grade_logo);
             }else{
-                imageView.setImageResource(R.drawable.logo);
+                imageView.setImageResource(R.drawable.faqs);
             }
             return convertView;
         }

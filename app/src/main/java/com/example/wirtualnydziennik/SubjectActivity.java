@@ -68,16 +68,66 @@ public class SubjectActivity extends AppCompatActivity {
                         break;
                     }
                     case 1: {
-                        subjectPreferences.edit().putString(SUB_PREF,"Data").apply();
+                        subjectPreferences.edit().putString(SUB_PREF,"Algebra").apply();
                         Intent intent = new Intent(SubjectActivity.this, SubjectDetail.class);
                         startActivity(intent);
                     }
 
                     case 2:{
-                        subjectPreferences.edit().putString(SUB_PREF,"Structures").apply();
+                        subjectPreferences.edit().putString(SUB_PREF,"Numerical Methods").apply();
                         Intent intent = new Intent(SubjectActivity.this, SubjectDetail.class);
                         startActivity(intent);
                     }
+
+                    case 3: {
+                        subjectPreferences.edit().putString(SUB_PREF,"Dynamic Systems").apply();
+                        Intent intent = new Intent(SubjectActivity.this, SubjectDetail.class);
+                        startActivity(intent);
+                    }
+
+                    case 4: {
+                        subjectPreferences.edit().putString(SUB_PREF,"Mobile Programing").apply();
+                        Intent intent = new Intent(SubjectActivity.this, SubjectDetail.class);
+                        startActivity(intent);
+                    }
+
+                    case 5: {
+                        subjectPreferences.edit().putString(SUB_PREF,"Big Data").apply();
+                        Intent intent = new Intent(SubjectActivity.this, SubjectDetail.class);
+                        startActivity(intent);
+                    }
+
+                    case 6: {
+                        subjectPreferences.edit().putString(SUB_PREF,"Web Technologies").apply();
+                        Intent intent = new Intent(SubjectActivity.this, SubjectDetail.class);
+                        startActivity(intent);
+                    }
+
+                    case 7: {
+                        subjectPreferences.edit().putString(SUB_PREF,"Operation Research").apply();
+                        Intent intent = new Intent(SubjectActivity.this, SubjectDetail.class);
+                        startActivity(intent);
+                    }
+
+                    case 8: {
+                        subjectPreferences.edit().putString(SUB_PREF,"Distributed Systems").apply();
+                        Intent intent = new Intent(SubjectActivity.this, SubjectDetail.class);
+                        startActivity(intent);
+                    }
+
+                    case 9: {
+                        subjectPreferences.edit().putString(SUB_PREF,"Mathematical Analysis").apply();
+                        Intent intent = new Intent(SubjectActivity.this, SubjectDetail.class);
+                        startActivity(intent);
+                    }
+
+                    case 10: {
+                        subjectPreferences.edit().putString(SUB_PREF,"WF").apply();
+                        Intent intent = new Intent(SubjectActivity.this, SubjectDetail.class);
+                        startActivity(intent);
+                    }
+
+
 
                     default:
                         break;

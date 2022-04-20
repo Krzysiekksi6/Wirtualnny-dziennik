@@ -46,10 +46,27 @@ public class SubjectDetail extends AppCompatActivity {
 
         if (subject_selected.equalsIgnoreCase("Algorithms")) {
             syllabus = getResources().getStringArray(R.array.Algorithms);
-        } else if (subject_selected.equalsIgnoreCase("Data")) {
-            syllabus = getResources().getStringArray(R.array.Data);
-        } else {
-            syllabus = getResources().getStringArray(R.array.Structures);
+        } else if (subject_selected.equalsIgnoreCase("Algebra")) {
+            syllabus = getResources().getStringArray(R.array.Algebra);
+        } else if (subject_selected.equalsIgnoreCase("Numerical Methods")) {
+            syllabus = getResources().getStringArray(R.array.Numerical_Methods);
+        } else if (subject_selected.equalsIgnoreCase("Dynamic Systems")) {
+            syllabus = getResources().getStringArray(R.array.Dynamic_Systems);
+        }else if (subject_selected.equalsIgnoreCase("Mobile Programing")) {
+            syllabus = getResources().getStringArray(R.array.Mobile_Programing);
+        }else if (subject_selected.equalsIgnoreCase("Big Data")) {
+            syllabus = getResources().getStringArray(R.array.Big_Data);
+        }else if (subject_selected.equalsIgnoreCase("Web Technologies")) {
+            syllabus = getResources().getStringArray(R.array.Web_Technoliges);
+        }else if (subject_selected.equalsIgnoreCase("Operation Research")) {
+            syllabus = getResources().getStringArray(R.array.Operation_Research);
+        }else if (subject_selected.equalsIgnoreCase("Distributed Systems")) {
+            syllabus = getResources().getStringArray(R.array.Distributed_Systems);
+        }else if (subject_selected.equalsIgnoreCase("Mathematical Analysis")) {
+            syllabus = getResources().getStringArray(R.array.Mathematical_Analysis);
+        }
+        else {
+            syllabus = getResources().getStringArray(R.array.WF);
         }
 
         SubjectDetailsAdapter subjectDetailsAdapter = new SubjectDetailsAdapter(this, titles, syllabus);
