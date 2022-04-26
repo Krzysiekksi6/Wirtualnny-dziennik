@@ -35,6 +35,7 @@ public class GradeAdapter extends RecyclerView.Adapter <GradeAdapter.MyViewHolde
         holder.subjectName.setText(subject.getNameOfSubject());
         holder.instructorName.setText(subject.getInstructor());
         holder.grades.setText(subject.getWhichClassId());
+
     }
 
     @Override

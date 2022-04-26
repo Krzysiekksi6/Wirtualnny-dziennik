@@ -29,10 +29,10 @@ public class GradesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_grades);
-//        progressDialog = new ProgressDialog(this);
-//        progressDialog.setCancelable(false);
-//        progressDialog.setMessage("Fetching Data...");
-//        progressDialog.show();
+        progressDialog = new ProgressDialog(this);
+        progressDialog.setCancelable(false);
+        progressDialog.setMessage("Fetching Data...");
+        progressDialog.show();
 
 
         recyclerView = findViewById(R.id.gradesList);
@@ -53,8 +53,8 @@ public class GradesActivity extends AppCompatActivity {
                     @Override
                     public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {
                         if(error!=null) {
-//                            if(progressDialog.isShowing())
-//                                progressDialog.dismiss();
+                            if(progressDialog.isShowing())
+                              progressDialog.dismiss();
                             Log.e("Firestore error",error.getMessage());
                             return;
                         }
@@ -63,8 +63,8 @@ public class GradesActivity extends AppCompatActivity {
                                 list.add(dc.getDocument().toObject(Subject.class));
                             }
                             myAdapter.notifyDataSetChanged();
-//                            if(progressDialog.isShowing())
-//                                progressDialog.dismiss();
+                           if(progressDialog.isShowing())
+                               progressDialog.dismiss();
                         }
                     }
                 });
