@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WirtualnyDziennik">
         <activity
+            android:name=".GradesActivity"
+            android:exported="true" />
+        <activity
             android:name=".SubjectDetail"
             android:exported="true" />
         <activity

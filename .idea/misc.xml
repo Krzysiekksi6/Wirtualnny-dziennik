@@ -11,6 +11,7 @@
         <entry key="..\:/Users/krzys/Desktop/Android Development/Wirtualnydziennik/app/src/main/res/layout/activity_add_student.xml" value="0.2" />
         <entry key="..\:/Users/krzys/Desktop/Android Development/Wirtualnydziennik/app/src/main/res/layout/activity_day_detail.xml" value="0.1953125" />
         <entry key="..\:/Users/krzys/Desktop/Android Development/Wirtualnydziennik/app/src/main/res/layout/activity_faq.xml" value="0.264" />
+        <entry key="..\:/Users/krzys/Desktop/Android Development/Wirtualnydziennik/app/src/main/res/layout/activity_grades.xml" value="0.2" />
         <entry key="..\:/Users/krzys/Desktop/Android Development/Wirtualnydziennik/app/src/main/res/layout/activity_login.xml" value="0.264" />
         <entry key="..\:/Users/krzys/Desktop/Android Development/Wirtualnydziennik/app/src/main/res/layout/activity_main.xml" value="0.3375" />
         <entry key="..\:/Users/krzys/Desktop/Android Development/Wirtualnydziennik/app/src/main/res/layout/activity_main2.xml" value="0.18385416666666668" />
@@ -24,6 +25,7 @@
         <entry key="..\:/Users/krzys/Desktop/Android Development/Wirtualnydziennik/app/src/main/res/layout/activity_week.xml" value="0.264" />
         <entry key="..\:/Users/krzys/Desktop/Android Development/Wirtualnydziennik/app/src/main/res/layout/activity_week_single_item.xml" value="0.264" />
         <entry key="..\:/Users/krzys/Desktop/Android Development/Wirtualnydziennik/app/src/main/res/layout/day_detail_single_item.xml" value="0.6" />
+        <entry key="..\:/Users/krzys/Desktop/Android Development/Wirtualnydziennik/app/src/main/res/layout/grade_single_item.xml" value="0.264" />
         <entry key="..\:/Users/krzys/Desktop/Android Development/Wirtualnydziennik/app/src/main/res/layout/subject_details_single_item.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/krzys/Desktop/Android Development/Wirtualnydziennik/app/src/main/res/layout/subject_single_item.xml" value="0.3515625" />
       </map>

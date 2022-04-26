@@ -5,6 +5,7 @@ public class Grade {
     private int weight;
     private String description;
 
+
     public Grade(float value, int weight, String description) {
         this.value = value;
         this.weight = weight;
@@ -38,4 +39,5 @@ public class Grade {
     public void setDescription(String description) {
         this.description = description;
     }
+
 }

@@ -61,7 +61,7 @@ public class MainActivityList extends AppCompatActivity {
                     }
 
                     case 2: {
-                        Intent intent = new Intent(MainActivityList.this, RegisterActivity.class);
+                        Intent intent = new Intent(MainActivityList.this, GradesActivity.class);
                         startActivity(intent);
                         break;
                     }

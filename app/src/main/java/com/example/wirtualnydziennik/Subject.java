@@ -1,35 +1,37 @@
 package com.example.wirtualnydziennik;
 
-import android.view.accessibility.AccessibilityRecord;
-
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
-import java.util.Scanner;
 /* TODO
 *  zrobić addGrade myśle czy trzeba robic musi byc to w klasie sterującej  */
 
-
-
-
 public class Subject{
 
-    private String nameOfSubjec;
-    private String instructor;
-    private String whichClasId;
+     String nameOfSubject;
+     String instructor;
+     String whichClassId;
     ArrayList<Grade> listOfGrades = new ArrayList<>();
+    List<String> grades;
     Grade grade = new Grade();
 
-    public Subject(String nameOfSubjec, String instructor, String whichClasId) {
-        this.nameOfSubjec = nameOfSubjec;
+    public Subject(String nameOfSubject, String instructor, String whichClassId) {
+        this.nameOfSubject = nameOfSubject;
         this.instructor = instructor;
-        this.whichClasId = whichClasId;
+        this.whichClassId = whichClassId;
     }
 
-    public Subject(String nameOfSubjec,String instructor){
-        this.nameOfSubjec = nameOfSubjec;
+    public Subject(String nameOfSubject,String instructor){
+        this.nameOfSubject = nameOfSubject;
         this.instructor = instructor;
     }
+
+    public Subject(String nameOfSubject,String instructor, List<String> grades){
+        this.nameOfSubject = nameOfSubject;
+        this.instructor = instructor;
+        this.grades = grades;
+    }
+
+    public Subject(){}
 
 
 
@@ -38,13 +40,24 @@ public class Subject{
 
     }
 
-
-    public String getNameOfSubjec() {
-        return nameOfSubjec;
+    public String getWhichClassId() {
+        return whichClassId;
     }
 
-    public void setNameOfSubjec(String nameOfSubjec) {
-        this.nameOfSubjec = nameOfSubjec;
+    public List<String> getGrades() {
+        return grades;
+    }
+
+    public void setListOfGrades(ArrayList<Grade> listOfGrades) {
+        this.listOfGrades = listOfGrades;
+    }
+
+    public String getNameOfSubject() {
+        return nameOfSubject;
+    }
+
+    public void setNameOfSubject(String nameOfSubject) {
+        this.nameOfSubject = nameOfSubject;
     }
 
     public String getInstructor() {
@@ -55,10 +68,18 @@ public class Subject{
         this.instructor = instructor;
     }
 
+    public String getListOfGrades() {
+        String lists = " ";
+        for (Grade listOfGrade : listOfGrades) {
+            lists += listOfGrade;
+        }
+        return lists;
+    }
+
     @Override
     public String toString() {
         return "Subject{" +
-                "nameOfSubjec='" + nameOfSubjec + '\'' +
+                "nameOfSubjec='" + nameOfSubject + '\'' +
                 ", instructor='" + instructor + '\'' +
                 '}';
     }
