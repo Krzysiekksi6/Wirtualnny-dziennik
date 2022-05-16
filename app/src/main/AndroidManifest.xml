@@ -30,6 +30,9 @@
             android:name=".DayDetail"
             android:exported="true" />
         <activity
+            android:name=".RegisterActivity"
+            android:exported="true" />
+        <activity
             android:name=".WeekActivity"
             android:exported="true" />
         <activity
@@ -44,9 +47,7 @@
         <activity
             android:name=".LoginActivity"
             android:exported="true" />
-        <activity
-            android:name=".RegisterActivity"
-            android:exported="true" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true">

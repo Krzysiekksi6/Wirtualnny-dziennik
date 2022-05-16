@@ -69,7 +69,7 @@ public class LoginActivity extends AppCompatActivity {
                                     FirebaseUser user = mAuth.getCurrentUser();
                                     userId = mAuth.getCurrentUser().getUid();
                                     sharedUserId(userId);
-                                    updateUI(user);
+                                    //updateUI(user);
                                     if (username.equals("profesor-anstar@edu.pl")) {
                                         Intent intent = new Intent(LoginActivity.this, MainActivity2.class);
                                         startActivity(intent);
@@ -109,15 +109,15 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
-    public void updateUI(FirebaseUser currentUser) {
-        Intent profileIntent = new Intent(this, RegisterActivity.class);
-        profileIntent.putExtra("email", currentUser.getEmail());
-        startActivity(profileIntent);
-        //TODO check (isStudent? or isProfessor?)
-        if (currentUser.getEmail().equals("profesor")) {
-
-        }
-    }
+//    public void updateUI(FirebaseUser currentUser) {
+//        Intent profileIntent = new Intent(this, RegisterActivity.class);
+//        profileIntent.putExtra("email", currentUser.getEmail());
+//        startActivity(profileIntent);
+//        //TODO check (isStudent? or isProfessor?)
+//        if (currentUser.getEmail().equals("profesor")) {
+//
+//        }
+//    }
 
     public void sharedUserId(String userId){
         SharedPreferences sharedPreferences = getSharedPreferences("shared preferences", MODE_PRIVATE);

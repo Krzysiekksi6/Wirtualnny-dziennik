@@ -25,11 +25,8 @@ public class MainActivityList extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_list);
         toolbar = findViewById(R.id.ToolbarMain);
-
-
         initToolbar();
         setupListView();
-
     }
 
 
@@ -70,6 +67,7 @@ public class MainActivityList extends AppCompatActivity {
                         startActivity(intent);
                         break;
                     }
+
                 }
             }
         });
