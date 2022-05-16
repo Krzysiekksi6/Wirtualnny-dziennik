@@ -1,6 +1,7 @@
 package com.example.wirtualnydziennik;
 
 import android.app.ProgressDialog;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -24,6 +25,8 @@ public class GradesActivity extends AppCompatActivity {
     GradeAdapter myAdapter;
     ArrayList<Subject> list;
     ProgressDialog progressDialog;
+    String userId;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,13 +45,14 @@ public class GradesActivity extends AppCompatActivity {
         list = new ArrayList<Subject>();
         myAdapter = new GradeAdapter(GradesActivity.this,list);
         recyclerView.setAdapter(myAdapter);
-
+        userId = loadData();
         EvenChangeListener();
 
     }
 
     private void EvenChangeListener() {
-        db.collection("subjects")
+
+        db.collection("subjects").document(userId).collection("grades")
                 .addSnapshotListener(new EventListener<QuerySnapshot>() {
                     @Override
                     public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {
@@ -68,6 +72,11 @@ public class GradesActivity extends AppCompatActivity {
                         }
                     }
                 });
+    }
+
+    private String loadData() {
+        SharedPreferences sharedPreferences = getSharedPreferences("shared preferences", MODE_PRIVATE);
+        return sharedPreferences.getString("KEY_ID", "keAu1gFOwuROIjWJvS1nWtKBXya2");
     }
 
 

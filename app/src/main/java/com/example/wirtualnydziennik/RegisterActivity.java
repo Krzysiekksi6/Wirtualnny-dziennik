@@ -1,8 +1,5 @@
 package com.example.wirtualnydziennik;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -14,6 +11,9 @@ import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -74,12 +74,6 @@ public class RegisterActivity extends AppCompatActivity {
                 Boolean isProfessor = checkStatus();
                 String location = locationEditText.getText().toString();
                 String phoneNumber = phoneEditText.getText().toString();
-                //TODO Ogarnąc checkboxy student i profesor i zaimplemenować odpowiednia zależność if ---> zrobiłem
-                // TODO w konstruktorze User jest atrubut boolean isProfessor; ???
-                // TODO jesli checkobx jest klikniety na profesora to ustalamy w konstruktorze warotsc true
-                // TODO Prawdopodobnie do checkboxa trzeba dodać tą sama radioGrupe czy cos takiego zeby mozna było tylko jedna opcje zaznaczyc
-                // TODO w LOGIN ACTIVITY pod przyciskiem login masz register (text view) po nacisnieciu textview ma byc zmiana activity na Register Activity
-                // TODO najlepiej zrobic najprosteszym intentem ktorego masz w 108 linice kodu na dole
 
                  user = new User(email,password,firstName,lastName,location,phoneNumber,isProfessor);
                 registerUser(email,password);
