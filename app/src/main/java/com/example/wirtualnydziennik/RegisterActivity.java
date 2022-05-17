@@ -75,7 +75,7 @@ public class RegisterActivity extends AppCompatActivity {
                 String location = locationEditText.getText().toString();
                 String phoneNumber = phoneEditText.getText().toString();
 
-                 user = new User(email,password,firstName,lastName,location,phoneNumber,isProfessor);
+                 //user = new User(email,password,firstName,lastName,location,phoneNumber,isProfessor);
                 registerUser(email,password);
 
 

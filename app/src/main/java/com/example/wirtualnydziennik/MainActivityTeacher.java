@@ -15,10 +15,13 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-public class MainActivityList extends AppCompatActivity {
+import com.example.wirtualnydziennik.teacher.FrequencyActivityTeacher;
+import com.example.wirtualnydziennik.teacher.GradesActivityTeacher;
+import com.example.wirtualnydziennik.teacher.NoteActivityTeacher;
+
+public class MainActivityTeacher extends AppCompatActivity {
 
     private Toolbar toolbar;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,17 +32,16 @@ public class MainActivityList extends AppCompatActivity {
         setupListView();
     }
 
-
     private void initToolbar() {
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("WD Student Application");
+        getSupportActionBar().setTitle("WD Teacher Application");
     }
 
-    private void setupListView(){
-        String [] title = getResources().getStringArray(R.array.Main_Student);
-        String [] description = getResources().getStringArray(R.array.Description_Student);
+    private void setupListView() {
+        String [] title = getResources().getStringArray(R.array.Main_Teacher);
+        String [] description = getResources().getStringArray(R.array.Description_Teacher);
 
-        SimpleAdapter simpleAdapter = new SimpleAdapter(this, title, description);
+        SimpleTeacherAdapter simpleAdapter = new SimpleTeacherAdapter(this, title, description);
         ListView listView = (ListView) findViewById(R.id.lvMain);
         listView.setAdapter(simpleAdapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -47,23 +49,29 @@ public class MainActivityList extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 switch (position) {
                     case 0: {
-                        Intent intent = new Intent(MainActivityList.this, WeekActivity.class);
+                        Intent intent = new Intent(MainActivityTeacher.this, WeekActivity.class);
                         startActivity(intent);
                         break;
                     }
                     case 1: {
-                        Intent intent = new Intent(MainActivityList.this, SubjectActivity.class);
+                        Intent intent = new Intent(MainActivityTeacher.this, NoteActivityTeacher.class);
                         startActivity(intent);
                         break;
                     }
 
                     case 2: {
-                        Intent intent = new Intent(MainActivityList.this, GradesActivity.class);
+                        Intent intent = new Intent(MainActivityTeacher.this, GradesActivityTeacher.class);
                         startActivity(intent);
                         break;
                     }
                     case 3: {
-                        Intent intent = new Intent(MainActivityList.this, FaqActivity.class);
+                        Intent intent = new Intent(MainActivityTeacher.this, FrequencyActivityTeacher.class);
+                        startActivity(intent);
+                        break;
+                    }
+
+                    case 4: {
+                        Intent intent = new Intent(MainActivityTeacher.this, FaqActivity.class);
                         startActivity(intent);
                         break;
                     }
@@ -71,9 +79,10 @@ public class MainActivityList extends AppCompatActivity {
                 }
             }
         });
+
     }
 
-    public class SimpleAdapter extends BaseAdapter {
+    public class SimpleTeacherAdapter extends BaseAdapter {
 
         private Context mContext;
         private LayoutInflater layoutInflater;
@@ -82,7 +91,7 @@ public class MainActivityList extends AppCompatActivity {
         private String[] descriptionArray;
         private ImageView imageView;
 
-        public SimpleAdapter(Context context, String[] titleArray, String[] descriptionArray) {
+        public SimpleTeacherAdapter(Context context, String[] titleArray, String[] descriptionArray) {
             mContext = context;
             this.titleArray = titleArray;
             this.descriptionArray = descriptionArray;
@@ -118,11 +127,16 @@ public class MainActivityList extends AppCompatActivity {
 
             if(titleArray[position].equalsIgnoreCase("Timetable")){
                 imageView.setImageResource(R.drawable.schedulde_logo);
-            }else if(titleArray[position].equalsIgnoreCase("Subjects")){
+            }else if(titleArray[position].equalsIgnoreCase("Note")){
                 imageView.setImageResource(R.drawable.books_logo);
             }else if(titleArray[position].equalsIgnoreCase("Grades")){
                 imageView.setImageResource(R.drawable.grade_logo);
-            }else{
+            }else if(titleArray[position].equalsIgnoreCase("Frequency")){
+                imageView.setImageResource(R.drawable.grade_logo);
+            }else if(titleArray[position].equalsIgnoreCase("Frequency")){
+                imageView.setImageResource(R.drawable.grade_logo);
+            }
+            else{
                 imageView.setImageResource(R.drawable.faqs);
             }
             return convertView;

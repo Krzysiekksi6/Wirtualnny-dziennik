@@ -52,7 +52,7 @@ public class GradesActivity extends AppCompatActivity {
 
     private void EvenChangeListener() {
 
-        db.collection("subjects").document(userId).collection("grades")
+        db.collection("Users").document(userId).collection("Grades")
                 .addSnapshotListener(new EventListener<QuerySnapshot>() {
                     @Override
                     public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {

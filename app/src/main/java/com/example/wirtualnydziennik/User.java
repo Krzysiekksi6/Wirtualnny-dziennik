@@ -8,6 +8,7 @@ public class User {
     private String phoneNumber;
     private boolean isProfessor;
     private String lastName;
+    private String id;
 
     public User() { }
 
@@ -31,6 +32,13 @@ public class User {
         this.location = location;
         this.phoneNumber = phoneNumber;
         this.isProfessor = isProfessor;
+        this.lastName = lastName;
+    }
+
+    public User(String email, String firstName, String id, String lastName) {
+        this.email = email;
+        this.firstName = firstName;
+        this.id = id;
         this.lastName = lastName;
     }
 
@@ -80,5 +88,29 @@ public class User {
 
     public void setProfessor(boolean professor) {
         isProfessor = professor;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }

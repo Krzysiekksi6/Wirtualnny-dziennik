@@ -71,7 +71,7 @@ public class LoginActivity extends AppCompatActivity {
                                     sharedUserId(userId);
                                     //updateUI(user);
                                     if (username.equals("profesor-anstar@edu.pl")) {
-                                        Intent intent = new Intent(LoginActivity.this, MainActivity2.class);
+                                        Intent intent = new Intent(LoginActivity.this, MainActivityTeacher.class);
                                         startActivity(intent);
                                     } else {
                                         Intent intent = new Intent(LoginActivity.this, MainActivityList.class);

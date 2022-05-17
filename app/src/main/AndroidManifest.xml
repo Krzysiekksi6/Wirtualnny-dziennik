@@ -12,6 +12,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WirtualnyDziennik">
         <activity
+            android:name=".userList"
+            android:exported="false" />
+        <activity
+            android:name=".teacher.GradesActivityTeacher"
+            android:exported="false" />
+        <activity
+            android:name=".teacher.FrequencyActivityTeacher"
+            android:exported="false" />
+        <activity
+            android:name=".teacher.NoteActivityTeacher"
+            android:exported="false" />
+        <activity
             android:name=".GradesActivity"
             android:exported="true" />
         <activity
@@ -42,12 +54,11 @@
             android:name=".FaqActivity"
             android:exported="true" />
         <activity
-            android:name=".MainActivity2"
+            android:name=".MainActivityTeacher"
             android:exported="true" />
         <activity
             android:name=".LoginActivity"
             android:exported="true" />
-
         <activity
             android:name=".MainActivity"
             android:exported="true">

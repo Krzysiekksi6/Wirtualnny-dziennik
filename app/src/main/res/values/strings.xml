@@ -14,19 +14,36 @@
     <string name="faq_fourth">Jaka jest maksymalna liczba studentow na kierunku Informatyka ? <br> </br> - Zgodnie z Zarządzeniem nr 24/2019/2020 Rektora ANS Tarnow
     na kierunku Informatyka jest 120 miejsc.</string>
 
-    <string-array name="Main">
+    <string-array name="Main_Student">
         <item>Timetable</item>
         <item>Subjects</item>
         <item>Grades</item>
         <item>FAQ</item>
     </string-array>
 
-    <string-array name="Description">
+    <string-array name="Description_Student">
         <item>Current schedule of classes</item>
         <item>Course list and syllabuses</item>
-        <item>Description 3</item>
+        <item>Check your grades!</item>
         <item>Frequently Asked Questions our institution</item>
     </string-array>
+
+    <string-array name="Main_Teacher">
+        <item>Timetable</item>
+        <item>Note</item>
+        <item>Grades</item>
+        <item>Frequency</item>
+        <item>FAQ</item>
+    </string-array>
+
+    <string-array name="Description_Teacher">
+        <item>Your current schedule</item>
+        <item>Note in the journal</item>
+        <item>Add grades to your students</item>
+        <item>Add frequency to your students</item>
+        <item>Frequently Asked Questions our institution</item>
+    </string-array>
+
 
     <string-array name="Week">
         <item>Monday </item>
