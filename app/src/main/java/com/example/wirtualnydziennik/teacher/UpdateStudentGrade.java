@@ -1,17 +1,26 @@
 package com.example.wirtualnydziennik.teacher;
 
+import static android.content.ContentValues.TAG;
+
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.wirtualnydziennik.R;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.ArrayList;
 
 public class UpdateStudentGrade extends AppCompatActivity {
 
@@ -44,9 +53,29 @@ public class UpdateStudentGrade extends AppCompatActivity {
     }
 
     private void UpdateData(String newGrade) {
-//        Map<String,Object> gradeDetails = new HashMap<>();
-//        gradeDetails.
-//        gradeRef.update("whichClassId", FieldValue.arrayUnion(newGrade));
+
+        ArrayList<String> lista = new ArrayList<>();
+        gradeRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                if (task.isSuccessful()) {
+                    DocumentSnapshot documentSnapshot = task.getResult();
+                    if (documentSnapshot.exists()) {
+                        gradeRef.update("whichClassId",documentSnapshot.get("whichClassId").toString() + "," +
+                                newGrade);
+                    }else {
+                        Log.d(TAG, "No such document");
+                    }
+                } else {
+                    Log.d(TAG, "get failed with ", task.getException());
+                }
+            }
+        });
+
+
+
+
+
     }
 
     private String loadData() {
