@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WirtualnyDziennik">
         <activity
+            android:name=".teacher.EditGradesActivity"
+            android:exported="false" />
+        <activity
             android:name=".userList"
             android:exported="false" />
         <activity
