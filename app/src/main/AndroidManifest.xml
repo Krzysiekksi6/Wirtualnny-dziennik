@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WirtualnyDziennik">
         <activity
-            android:name=".UpdateStudentGrade"
+            android:name=".teacher.UpdateStudentGrade"
             android:exported="false" />
         <activity
             android:name=".teacher.EditGradesActivity"

@@ -1,7 +1,6 @@
 package com.example.wirtualnydziennik;
 
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -56,10 +55,5 @@ public class GradeAdapter extends RecyclerView.Adapter <GradeAdapter.MyViewHolde
         }
     }
 
-    public void sharedSubjectId(String subjectId){
-        SharedPreferences preferences = context.getSharedPreferences("subject id", Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = preferences.edit();
-        editor.putString("KEY_SUBJECT", subjectId);
-        editor.apply();
-    }
+
 }

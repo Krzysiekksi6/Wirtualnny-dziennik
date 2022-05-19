@@ -11,7 +11,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.wirtualnydziennik.FaqActivity;
 import com.example.wirtualnydziennik.R;
 import com.example.wirtualnydziennik.Subject;
 import com.google.firebase.firestore.DocumentChange;
@@ -85,9 +84,9 @@ public class EditGradesActivity extends AppCompatActivity implements EditGradeAd
     @Override
     public void onGradeClick(int position, String subjectId) {
         list.get(position);
-        Intent intent = new Intent(this, FaqActivity.class);
-        sharedSubjectId(subjectId);
+        Intent intent = new Intent(this, UpdateStudentGrade.class);
         startActivity(intent);
+        sharedSubjectId(subjectId);
         //TODO odbieranie subjectId (ID w firestore == nazwa przedmiotu)
     }
 
