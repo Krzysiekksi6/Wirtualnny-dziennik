@@ -64,10 +64,13 @@ public class EditGradeAdapter extends RecyclerView.Adapter <EditGradeAdapter.Edi
 
         @Override
         public void onClick(View v) {
-            onGradeListener.onGradeClick(getAdapterPosition());
+            String subjectId = subjectName.getText().toString();
+            onGradeListener.onGradeClick(getAdapterPosition(),subjectId);
         }
     }
     public interface OnGradeListener{
-        void onGradeClick(int position);
+        void onGradeClick(int position, String subjectId);
     }
+
+
 }

@@ -81,10 +81,22 @@ public class EditGradesActivity extends AppCompatActivity implements EditGradeAd
         return sharedPreferences.getString("ID_TEACHER", "keAu1gFOwuROIjWJvS1nWtKBXya2");
     }
 
+
     @Override
-    public void onGradeClick(int position) {
+    public void onGradeClick(int position, String subjectId) {
         list.get(position);
         Intent intent = new Intent(this, FaqActivity.class);
+        sharedSubjectId(subjectId);
         startActivity(intent);
+        //TODO odbieranie subjectId (ID w firestore == nazwa przedmiotu)
     }
+
+    public void sharedSubjectId(String userId){
+        SharedPreferences sharedPreferences = getSharedPreferences("shared preferences teacher", MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("ID_TEACHER", userId);
+        editor.apply();
+    }
+
+
 }
