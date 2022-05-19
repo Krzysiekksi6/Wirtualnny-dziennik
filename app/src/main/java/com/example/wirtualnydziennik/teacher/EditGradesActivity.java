@@ -90,10 +90,10 @@ public class EditGradesActivity extends AppCompatActivity implements EditGradeAd
         //TODO odbieranie subjectId (ID w firestore == nazwa przedmiotu)
     }
 
-    public void sharedSubjectId(String userId){
+    public void sharedSubjectId(String subjectId){
         SharedPreferences sharedPreferences = getSharedPreferences("shared preferences teacher", MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString("ID_TEACHER", userId);
+        editor.putString("ID_TEACHER", subjectId);
         editor.apply();
     }
 

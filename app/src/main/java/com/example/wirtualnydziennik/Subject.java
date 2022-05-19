@@ -1,7 +1,6 @@
 package com.example.wirtualnydziennik;
 
 import java.util.ArrayList;
-import java.util.List;
 /* TODO
 *  zrobić addGrade myśle czy trzeba robic musi byc to w klasie sterującej  */
 
@@ -10,13 +9,12 @@ public class Subject{
      String nameOfSubject;
      String instructor;
      String whichClassId;
-    ArrayList<Grade> listOfGrades = new ArrayList<>();
-    List<String> grades;
-    Grade grade = new Grade();
+     ArrayList<Grade> listOfGrades = new ArrayList<>();
+     Grade grade = new Grade();
 
-    public Subject(String nameOfSubject, String instructor, String whichClassId) {
-        this.nameOfSubject = nameOfSubject;
+    public Subject(String instructor, String nameOfSubject, String whichClassId) {
         this.instructor = instructor;
+        this.nameOfSubject = nameOfSubject;
         this.whichClassId = whichClassId;
     }
 
@@ -25,11 +23,8 @@ public class Subject{
         this.instructor = instructor;
     }
 
-    public Subject(String nameOfSubject,String instructor, List<String> grades){
-        this.nameOfSubject = nameOfSubject;
-        this.instructor = instructor;
-        this.grades = grades;
-    }
+
+
 
     public Subject(){}
 
@@ -44,9 +39,9 @@ public class Subject{
         return whichClassId;
     }
 
-    public List<String> getGrades() {
-        return grades;
-    }
+//    public List<String> getGrades() {
+//        return grades;
+//    }
 
     public void setListOfGrades(ArrayList<Grade> listOfGrades) {
         this.listOfGrades = listOfGrades;
