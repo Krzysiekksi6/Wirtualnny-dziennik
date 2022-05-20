@@ -10,7 +10,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.wirtualnydziennik.LoginActivity;
 import com.example.wirtualnydziennik.R;
 import com.example.wirtualnydziennik.User;
 import com.google.firebase.database.DataSnapshot;
@@ -26,10 +25,8 @@ public class GradesActivityTeacher extends AppCompatActivity implements AddGrade
     RecyclerView recyclerView;
     DatabaseReference databaseReference;
     AddGradesAdapter gradeAdapter;
-    private RecyclerView.LayoutManager layoutManagerRecyclerView;
     ArrayList<User> list;
     TextView textView;
-    LoginActivity loginActivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

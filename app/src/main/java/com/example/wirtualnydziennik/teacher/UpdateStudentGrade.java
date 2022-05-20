@@ -2,6 +2,7 @@ package com.example.wirtualnydziennik.teacher;
 
 import static android.content.ContentValues.TAG;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
@@ -20,14 +21,14 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-import java.util.ArrayList;
-
 public class UpdateStudentGrade extends AppCompatActivity {
 
     private TextView textView;
     private EditText addGradeEditText;
     private Button applyGradeButton;
+    private Intent intent;
     private String subjectId;
+    private String userId;
     FirebaseFirestore db;
     DocumentReference gradeRef;
 
@@ -36,12 +37,15 @@ public class UpdateStudentGrade extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_student_grade);
 
+        intent = getIntent();
         textView = findViewById(R.id.addGradeTv);
         addGradeEditText = findViewById(R.id.enterGradeEditText);
         applyGradeButton = findViewById(R.id.addGradeButton);
-        subjectId = loadData();
+        userId = intent.getStringExtra("USER_ID");
+        subjectId = intent.getStringExtra("SUBJECT_ID");
         db = FirebaseFirestore.getInstance();
-        gradeRef = db.collection("Users").document("SfzLVwYSwVTARU3DLqIOhBNrEga2").collection("Grades").document("Mobilki");
+        gradeRef = db.collection("Users").document(userId).collection("Grades").document(subjectId);
+
         applyGradeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -54,7 +58,6 @@ public class UpdateStudentGrade extends AppCompatActivity {
 
     private void UpdateData(String newGrade) {
 
-        ArrayList<String> lista = new ArrayList<>();
         gradeRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
             public void onComplete(@NonNull Task<DocumentSnapshot> task) {
@@ -72,14 +75,15 @@ public class UpdateStudentGrade extends AppCompatActivity {
             }
         });
 
-
-
-
-
     }
 
-    private String loadData() {
+//    private String loadUserId() {
+//        SharedPreferences sharedPreferences = getSharedPreferences("shared preferences teacher", MODE_PRIVATE);
+//        return sharedPreferences.getString("ID_USER", "Mobilki");
+//    }
+
+    private String loadSubjectId() {
         SharedPreferences sharedPreferences = getSharedPreferences("shared preferences teacher", MODE_PRIVATE);
-        return sharedPreferences.getString("ID_TEACHER", "Mobilki");
+        return sharedPreferences.getString("ID_UPDATE_GRADE_TEACHER", "Mobilki");
     }
 }

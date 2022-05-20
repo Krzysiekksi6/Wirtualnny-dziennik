@@ -120,9 +120,9 @@ public class LoginActivity extends AppCompatActivity {
 //    }
 
     public void sharedUserId(String userId){
-        SharedPreferences sharedPreferences = getSharedPreferences("shared preferences", MODE_PRIVATE);
+        SharedPreferences sharedPreferences = getSharedPreferences("shared preferences student logged", MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString("KEY_ID", userId);
+        editor.putString("STUDENT_LOGGED_ID", userId);
         editor.apply();
     }
 

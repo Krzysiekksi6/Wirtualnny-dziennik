@@ -75,8 +75,8 @@ public class GradesActivity extends AppCompatActivity {
     }
 
     private String loadData() {
-        SharedPreferences sharedPreferences = getSharedPreferences("shared preferences", MODE_PRIVATE);
-        return sharedPreferences.getString("KEY_ID", "keAu1gFOwuROIjWJvS1nWtKBXya2");
+        SharedPreferences sharedPreferences = getSharedPreferences("shared preferences student logged", MODE_PRIVATE);
+        return sharedPreferences.getString("STUDENT_LOGGED_ID", "keAu1gFOwuROIjWJvS1nWtKBXya2");
     }
 
 

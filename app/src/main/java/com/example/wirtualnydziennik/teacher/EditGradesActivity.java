@@ -85,17 +85,21 @@ public class EditGradesActivity extends AppCompatActivity implements EditGradeAd
     public void onGradeClick(int position, String subjectId) {
         list.get(position);
         Intent intent = new Intent(this, UpdateStudentGrade.class);
+        intent.putExtra("SUBJECT_ID", subjectId);
+        intent.putExtra("USER_ID", userId);
         startActivity(intent);
-        sharedSubjectId(subjectId);
+//        sharedDataId(subjectId, userId);
+
+
         //TODO odbieranie subjectId (ID w firestore == nazwa przedmiotu)
     }
 
-    public void sharedSubjectId(String subjectId){
-        SharedPreferences sharedPreferences = getSharedPreferences("shared preferences teacher", MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString("ID_TEACHER", subjectId);
-        editor.apply();
-    }
+//    public void sharedDataId(String subjectId, String userId){
+//        SharedPreferences sharedPreferences = getSharedPreferences("shared preferences teacher", MODE_PRIVATE);
+//        SharedPreferences.Editor editor = sharedPreferences.edit();
+//        editor.putString("ID_UPDATE_GRADE_TEACHER",);
+//        editor.apply();
+//    }
 
 
 }
