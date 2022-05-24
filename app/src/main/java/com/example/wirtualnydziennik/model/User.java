@@ -1,4 +1,4 @@
-package com.example.wirtualnydziennik;
+package com.example.wirtualnydziennik.model;
 
 public class User {
     private String email;

@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.wirtualnydziennik.model.Subject;
 import com.google.firebase.firestore.DocumentChange;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -18,6 +19,10 @@ import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 
+/**
+ * Klasa wyswietlajaca oceny ucznia pobierane z Bazy Danych za pomoca userId
+ * Uprawnienia: Uczen
+ */
 public class GradesActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
@@ -26,6 +31,7 @@ public class GradesActivity extends AppCompatActivity {
     ArrayList<Subject> list;
     ProgressDialog progressDialog;
     private String userId;
+
 
 
     @Override

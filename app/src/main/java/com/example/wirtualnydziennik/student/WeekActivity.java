@@ -1,4 +1,4 @@
-package com.example.wirtualnydziennik;
+package com.example.wirtualnydziennik.student;
 
 import android.content.Context;
 import android.content.Intent;
@@ -18,8 +18,14 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import com.example.wirtualnydziennik.model.DayDetail;
+import com.example.wirtualnydziennik.R;
 import com.example.wirtualnydziennik.Utils.LetterImageView;
 
+/**
+ * Klasa wyswietlajaca plan zajec ucznia
+ * Uprawnienia: Uczen
+ */
 public class WeekActivity extends AppCompatActivity {
     private Toolbar toolbar;
     private ListView listView;

@@ -1,4 +1,4 @@
-package com.example.wirtualnydziennik;
+package com.example.wirtualnydziennik.teacher;
 
 import android.content.Context;
 import android.content.Intent;
@@ -15,9 +15,14 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import com.example.wirtualnydziennik.teacher.FrequencyActivityTeacher;
-import com.example.wirtualnydziennik.teacher.GradesActivityTeacher;
-import com.example.wirtualnydziennik.teacher.NoteActivityTeacher;
+import com.example.wirtualnydziennik.FaqActivity;
+import com.example.wirtualnydziennik.R;
+import com.example.wirtualnydziennik.student.WeekActivity;
+
+/**
+ * Menu Glowne Aplikacji
+ * Uprawnienia: Profesor
+ */
 
 public class MainActivityTeacher extends AppCompatActivity {
 
@@ -133,10 +138,7 @@ public class MainActivityTeacher extends AppCompatActivity {
                 imageView.setImageResource(R.drawable.grade_logo);
             }else if(titleArray[position].equalsIgnoreCase("Frequency")){
                 imageView.setImageResource(R.drawable.grade_logo);
-            }else if(titleArray[position].equalsIgnoreCase("Frequency")){
-                imageView.setImageResource(R.drawable.grade_logo);
-            }
-            else{
+            } else{
                 imageView.setImageResource(R.drawable.faqs);
             }
             return convertView;

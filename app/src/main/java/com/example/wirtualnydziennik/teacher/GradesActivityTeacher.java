@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.wirtualnydziennik.R;
-import com.example.wirtualnydziennik.User;
+import com.example.wirtualnydziennik.model.User;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -20,7 +20,13 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
+/**
+ * Klasa odpowiadajaca za pobranie z bazy danych wszystkich uczniow i mozliwosc przejscia do
+ * Activity edycji ocen
+ */
+
 public class GradesActivityTeacher extends AppCompatActivity implements AddGradesAdapter.OnNoteListener {
+
 
     RecyclerView recyclerView;
     DatabaseReference databaseReference;
@@ -42,6 +48,8 @@ public class GradesActivityTeacher extends AppCompatActivity implements AddGrade
         recyclerView.setAdapter(gradeAdapter);
 
         textView = findViewById(R.id.tvIdStudentItem);
+
+
 
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override

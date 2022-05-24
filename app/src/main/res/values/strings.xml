@@ -18,13 +18,17 @@
         <item>Timetable</item>
         <item>Subjects</item>
         <item>Grades</item>
+        <item>Note</item>
+        <item>Frequency</item>
         <item>FAQ</item>
     </string-array>
 
     <string-array name="Description_Student">
         <item>Current schedule of classes</item>
         <item>Course list and syllabuses</item>
-        <item>Check your grades!</item>
+        <item>Check your Grades!</item>
+        <item>Check your Note! Naughty</item>
+        <item>Check your Frequency!</item>
         <item>Frequently Asked Questions our institution</item>
     </string-array>
 

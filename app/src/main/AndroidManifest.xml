@@ -12,6 +12,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WirtualnyDziennik">
         <activity
+            android:name=".EditNotesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EditFrequencyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FrequencyActivityStudent"
+            android:exported="false" />
+        <activity
+            android:name=".NoteActivityStudnet"
+            android:exported="false" />
+        <activity
             android:name=".teacher.UpdateStudentGrade"
             android:exported="false" />
         <activity
@@ -33,10 +45,10 @@
             android:name=".GradesActivity"
             android:exported="true" />
         <activity
-            android:name=".SubjectDetail"
+            android:name=".model.SubjectDetail"
             android:exported="true" />
         <activity
-            android:name=".SubjectActivity"
+            android:name=".student.SubjectActivity"
             android:exported="true" />
         <activity
             android:name=".PrintAllStudents"
@@ -45,22 +57,22 @@
             android:name=".AddStudentActivity"
             android:exported="true" />
         <activity
-            android:name=".DayDetail"
+            android:name=".model.DayDetail"
             android:exported="true" />
         <activity
             android:name=".RegisterActivity"
             android:exported="true" />
         <activity
-            android:name=".WeekActivity"
+            android:name=".student.WeekActivity"
             android:exported="true" />
         <activity
-            android:name=".MainActivityList"
+            android:name=".student.MainActivityList"
             android:exported="true" />
         <activity
             android:name=".FaqActivity"
             android:exported="true" />
         <activity
-            android:name=".MainActivityTeacher"
+            android:name=".teacher.MainActivityTeacher"
             android:exported="true" />
         <activity
             android:name=".LoginActivity"

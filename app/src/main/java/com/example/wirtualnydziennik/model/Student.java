@@ -1,11 +1,10 @@
-package com.example.wirtualnydziennik;
+package com.example.wirtualnydziennik.model;
 
 import java.util.ArrayList;
-/*
-TODO
-Trzeba zrobic to samo co w klasie grade
- */
 
+/**
+ * Klasa model studenta
+ */
 
 public class Student {
     private String firstName;

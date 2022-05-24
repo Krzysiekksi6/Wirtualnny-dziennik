@@ -14,11 +14,18 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.wirtualnydziennik.student.MainActivityList;
+import com.example.wirtualnydziennik.teacher.MainActivityTeacher;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+
+/**
+ * Klasa obslugujaca Logike Logowania do Aplikacji
+ * Uprawnienia: Uczen i Profesor
+ */
 
 public class LoginActivity extends AppCompatActivity {
     private TextView titleTextView, registerTextView, forgotPasswordTextView;
@@ -43,13 +50,6 @@ public class LoginActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         registerButton = findViewById(R.id.reg_button);
 
-        /** Sending Hello world to realtime database */
-//        FirebaseDatabase database = FirebaseDatabase.getInstance();
-//        DatabaseReference myRef = database.getReference("message");
-//
-//        myRef.setValue("Hello, World!");
-
-
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,7 +57,6 @@ public class LoginActivity extends AppCompatActivity {
 
                 String username = userEditText.getText().toString();
                 String password = passwordEditText.getText().toString();
-
 
                 mAuth.signInWithEmailAndPassword(username, password)
                         .addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {

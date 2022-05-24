@@ -1,4 +1,4 @@
-package com.example.wirtualnydziennik;
+package com.example.wirtualnydziennik.student;
 
 import android.content.Context;
 import android.content.Intent;
@@ -15,10 +15,20 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import com.example.wirtualnydziennik.FaqActivity;
+import com.example.wirtualnydziennik.FrequencyActivityStudent;
+import com.example.wirtualnydziennik.GradesActivity;
+import com.example.wirtualnydziennik.NoteActivityStudnet;
+import com.example.wirtualnydziennik.R;
+
+/**
+ * Menu Glowne Aplikacji
+ * Uprawnienia: Uczen
+ */
+
 public class MainActivityList extends AppCompatActivity {
 
     private Toolbar toolbar;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,7 +72,21 @@ public class MainActivityList extends AppCompatActivity {
                         startActivity(intent);
                         break;
                     }
+
                     case 3: {
+                        Intent intent = new Intent(MainActivityList.this, NoteActivityStudnet.class);
+                        startActivity(intent);
+                        break;
+                    }
+
+                    case 4: {
+                        Intent intent = new Intent(MainActivityList.this, FrequencyActivityStudent.class);
+                        startActivity(intent);
+                        break;
+                    }
+
+
+                    case 5: {
                         Intent intent = new Intent(MainActivityList.this, FaqActivity.class);
                         startActivity(intent);
                         break;
@@ -122,7 +146,12 @@ public class MainActivityList extends AppCompatActivity {
                 imageView.setImageResource(R.drawable.books_logo);
             }else if(titleArray[position].equalsIgnoreCase("Grades")){
                 imageView.setImageResource(R.drawable.grade_logo);
-            }else{
+            }else if (titleArray[position].equalsIgnoreCase("Note")) {
+                imageView.setImageResource(R.drawable.books_logo);
+            } else if (titleArray[position].equalsIgnoreCase("Frequency")) {
+                imageView.setImageResource(R.drawable.grade_logo);
+            }
+            else{
                 imageView.setImageResource(R.drawable.faqs);
             }
             return convertView;

@@ -14,29 +14,28 @@ import com.example.wirtualnydziennik.model.User;
 
 import java.util.ArrayList;
 
-public class AddGradesAdapter extends RecyclerView.Adapter<AddGradesAdapter.GradeViewHolder> {
-    private Context contexte;
+public class AddFrequencyAdapter extends RecyclerView.Adapter<AddFrequencyAdapter.FrequencyViewHolder> {
+
+    private Context context;
     private ArrayList<User> list;
-    private OnNoteListener mOnNoteListener;
+    private OnNoteListenerFrequency mOnNoteListener;
 
-
-
-    public AddGradesAdapter(Context context, ArrayList<User> list, OnNoteListener onNoteListener) {
-        this.contexte = context;
+    public AddFrequencyAdapter(Context context, ArrayList<User> list, OnNoteListenerFrequency onNoteListener) {
+        this.context = context;
         this.list = list;
         this.mOnNoteListener = onNoteListener;
     }
 
     @NonNull
     @Override
-    public GradeViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(contexte).inflate(R.layout.item_add_grades_teacher,parent,false);
-        GradeViewHolder gradeViewHolder = new GradeViewHolder(v,mOnNoteListener);
+    public FrequencyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View v = LayoutInflater.from(context).inflate(R.layout.item_add_grades_teacher,parent,false);
+        FrequencyViewHolder gradeViewHolder = new FrequencyViewHolder(v,mOnNoteListener);
         return gradeViewHolder;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull GradeViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull FrequencyViewHolder holder, int position) {
         User user = list.get(position);
         holder.firstName.setText(user.getFirstName());
         holder.lastName.setText(user.getLastName());
@@ -49,12 +48,10 @@ public class AddGradesAdapter extends RecyclerView.Adapter<AddGradesAdapter.Grad
         return list.size();
     }
 
-
-    public static class GradeViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+    public class FrequencyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         TextView firstName, lastName, email, id;
-        OnNoteListener onNoteListener;
-
-        public GradeViewHolder(@NonNull View itemView, OnNoteListener onNoteListener) {
+        OnNoteListenerFrequency onNoteListener;
+        public FrequencyViewHolder(@NonNull View itemView, OnNoteListenerFrequency onNoteListener) {
             super(itemView);
             firstName = itemView.findViewById(R.id.tvFirstNameStudentItem);
             lastName = itemView.findViewById(R.id.tvLastNameStudentItem);
@@ -67,10 +64,10 @@ public class AddGradesAdapter extends RecyclerView.Adapter<AddGradesAdapter.Grad
         @Override
         public void onClick(View v) {
             String userId = id.getText().toString();
-            onNoteListener.onNoteClick(getAdapterPosition(), userId);
+            onNoteListener.onNoteClickFrequency(getAdapterPosition(), userId);
         }
     }
-    public interface OnNoteListener {
-        void onNoteClick(int position, String userId);
+    public interface OnNoteListenerFrequency {
+        void onNoteClickFrequency(int position, String userId);
     }
 }

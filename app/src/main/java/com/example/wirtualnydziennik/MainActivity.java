@@ -6,6 +6,11 @@ import android.os.Handler;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+/**
+ * Klasa obslugujaca Splash Screen
+ * Uprawnienia: Uczen i Profesor
+ */
+
 public class MainActivity extends AppCompatActivity {
     private static int TIME_OUT_SPLASH = 4000;
     static int idCounter=0;

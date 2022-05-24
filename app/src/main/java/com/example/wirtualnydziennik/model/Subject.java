@@ -1,9 +1,12 @@
-package com.example.wirtualnydziennik;
+package com.example.wirtualnydziennik.model;
+
+import com.example.wirtualnydziennik.Grade;
 
 import java.util.ArrayList;
-/* TODO
-*  zrobić addGrade myśle czy trzeba robic musi byc to w klasie sterującej  */
 
+/**
+ * Klasa model przedmiotu
+ */
 public class Subject{
 
      String nameOfSubject;

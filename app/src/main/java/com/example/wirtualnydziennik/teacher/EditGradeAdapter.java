@@ -10,7 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.wirtualnydziennik.R;
-import com.example.wirtualnydziennik.Subject;
+import com.example.wirtualnydziennik.model.Subject;
 
 import java.util.ArrayList;
 
