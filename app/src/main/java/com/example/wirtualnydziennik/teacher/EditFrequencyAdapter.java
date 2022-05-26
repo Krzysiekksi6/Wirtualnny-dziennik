@@ -63,7 +63,7 @@ public class EditFrequencyAdapter extends RecyclerView.Adapter<EditFrequencyAdap
 
             this.onGradeListener = onGradeListener;
 
-            itemView.setOnClickListener(this);
+            //itemView.setOnClickListener(this);
         }
 
         @Override

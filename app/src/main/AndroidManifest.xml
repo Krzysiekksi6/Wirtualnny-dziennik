@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WirtualnyDziennik">
         <activity
+            android:name=".teacher.UpdateNote"
+            android:exported="false" />
+        <activity
             android:name=".teacher.UpdateFrequency"
             android:exported="false" />
         <activity

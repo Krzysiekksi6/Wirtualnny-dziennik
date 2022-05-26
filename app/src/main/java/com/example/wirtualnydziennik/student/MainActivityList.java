@@ -15,8 +15,8 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import com.example.wirtualnydziennik.EditFrequencyActivity;
 import com.example.wirtualnydziennik.FaqActivity;
-import com.example.wirtualnydziennik.FrequencyActivityStudent;
 import com.example.wirtualnydziennik.GradesActivity;
 import com.example.wirtualnydziennik.NoteActivityStudnet;
 import com.example.wirtualnydziennik.R;
@@ -80,7 +80,7 @@ public class MainActivityList extends AppCompatActivity {
                     }
 
                     case 4: {
-                        Intent intent = new Intent(MainActivityList.this, FrequencyActivityStudent.class);
+                        Intent intent = new Intent(MainActivityList.this, EditFrequencyActivity.class);
                         startActivity(intent);
                         break;
                     }

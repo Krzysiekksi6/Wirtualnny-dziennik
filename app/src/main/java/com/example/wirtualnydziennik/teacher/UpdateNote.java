@@ -21,48 +21,46 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 
-public class UpdateFrequency extends AppCompatActivity {
-
-    private TextView date,dayOfWeek,numberLesson,status,teacher,time;
-    private EditText enterStatus, enterLesson, enterTime,enterTeacherName;
+public class UpdateNote extends AppCompatActivity {
+    private TextView category,content,date,teacher;
+    private EditText enterCategory, enterContent, enterTeacherName;
     private Button confirmButton;
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
-    private String userId, dateString, dayOfWeekString,
-            numberLessonString, statusString, teacherString, timeString;
-    Context context = getApplicationContext();
-    int duration = Toast.LENGTH_SHORT;
+    private String userId, categoryString, contentString, dateString, teacherString;
+    private Context context = getApplicationContext();
+    private int duration = Toast.LENGTH_SHORT;
+
+
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_update_frequency);
-        initVariables();
+        setContentView(R.layout.activity_update_note);
         userId = loadData();
         initVariables();
         getDataFromUser();
 
+
     }
 
     private void getDataFromUser() {
-        if (!date.getText().toString().isEmpty() && !dayOfWeek.getText().toString().isEmpty() &&
-        !numberLesson.getText().toString().isEmpty() && !status.getText().toString().isEmpty() &&
-        !teacher.getText().toString().isEmpty() && !time.getText().toString().isEmpty()) {
+
+        if (!category.getText().toString().isEmpty() && !content.getText().toString().isEmpty() &&
+        !date.getText().toString().isEmpty() && !teacher.getText().toString().isEmpty()) {
             confirmButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    categoryString = category.getText().toString();
+                    contentString = content.getText().toString();
                     dateString = date.getText().toString();
-                    dayOfWeekString = dayOfWeek.getText().toString();
-                    numberLessonString = numberLesson.getText().toString();
-                    statusString = status.getText().toString();
                     teacherString = teacher.getText().toString();
-                    timeString = time.getText().toString();
                     updateDb();
                     Toast.makeText(context, "SUCCESS", duration);
                 }
@@ -72,19 +70,13 @@ public class UpdateFrequency extends AppCompatActivity {
         }
     }
 
-    private String loadData() {
-        return "SfzLVwYSwVTARU3DLqIOhBNrEga2";
-    }
-
-    private void updateDb(){
+    private void updateDb() {
         Map<String,Object> map = new HashMap<>();
+        map.put("category", categoryString);
+        map.put("content", contentString);
         map.put("date", dateString);
-        map.put("dayOfWeek", dayOfWeekString);
-        map.put("numberLesson", numberLessonString);
-        map.put("status", statusString);
         map.put("teacher", teacherString);
-        map.put("time", timeString);
-        db.collection("Users").document(userId).collection("Frequency")
+        db.collection("Users").document(userId).collection("Note")
                 .add(map)
                 .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                     @Override
@@ -100,19 +92,21 @@ public class UpdateFrequency extends AppCompatActivity {
                 });
     }
 
+    //TODO userID
+    private String loadData() {
+        return "SfzLVwYSwVTARU3DLqIOhBNrEga2";
+    }
 
     private void initVariables() {
-        String currentDayOfWeek = LocalDate.now().getDayOfWeek().name();
         String currentDate = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(new Date());
-        numberLesson = findViewById(R.id.tvSelectLesson);
-        status = findViewById(R.id.tvStatusFrequency);
-        teacher = findViewById(R.id.tvTeacherNameFrequency);
-        time = findViewById(R.id.tvTimeFrequency);
-        confirmButton = findViewById(R.id.confirm_button_frequency);
-        dayOfWeek = findViewById(R.id.tvCurrentDayFrequency);
-        date = findViewById(R.id.tvCurrentDateFrequency);
+        date = findViewById(R.id.tvDateNote);
+        category = findViewById(R.id.tvCategoryNote);
+        content = findViewById(R.id.tvContentNote);
+        teacher = findViewById(R.id.tvTeacherNameNote);
+        enterCategory = findViewById(R.id.editTextCategoryNote);
+        enterContent = findViewById(R.id.editTextContentNote);
+        enterTeacherName = findViewById(R.id.editTextTeacherNameNote);
+        confirmButton = findViewById(R.id.confirm_button_note);
         date.setText(currentDate);
-        dayOfWeek.setText(currentDayOfWeek.substring(0,1).toUpperCase(Locale.ROOT) + currentDayOfWeek.substring(1).toLowerCase(Locale.ROOT));
-
     }
 }

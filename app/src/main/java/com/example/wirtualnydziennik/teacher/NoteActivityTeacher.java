@@ -10,7 +10,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.wirtualnydziennik.EditNotesActivity;
 import com.example.wirtualnydziennik.R;
 import com.example.wirtualnydziennik.model.User;
 import com.google.firebase.database.DataSnapshot;
@@ -64,7 +63,7 @@ public class NoteActivityTeacher extends AppCompatActivity implements AddNotesAd
     @Override
     public void onNoteClickNote(int position, String userId) {
         list.get(position);
-        Intent intent = new Intent(this, EditNotesActivity.class);
+        Intent intent = new Intent(this, UpdateNote.class);
         sharedUserId(userId);
         startActivity(intent);
 
