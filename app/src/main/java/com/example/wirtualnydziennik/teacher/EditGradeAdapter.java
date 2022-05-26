@@ -14,6 +14,9 @@ import com.example.wirtualnydziennik.model.Subject;
 
 import java.util.ArrayList;
 
+/**
+ * Klasa oblsugujaca dodawanie ocen do bazy danych i ich zapis
+ */
 public class EditGradeAdapter extends RecyclerView.Adapter <EditGradeAdapter.EditViewHolder>{
     private Context context;
     private ArrayList<Subject> subjectArrayList;
@@ -68,6 +71,7 @@ public class EditGradeAdapter extends RecyclerView.Adapter <EditGradeAdapter.Edi
             onGradeListener.onGradeClick(getAdapterPosition(),subjectId);
         }
     }
+
     public interface OnGradeListener{
         void onGradeClick(int position, String subjectId);
     }

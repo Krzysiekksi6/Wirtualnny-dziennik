@@ -1,5 +1,6 @@
 package com.example.wirtualnydziennik.teacher;
 
+import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -55,6 +56,7 @@ public class EditGradesActivity extends AppCompatActivity implements EditGradeAd
 
         db.collection("Users").document(userId).collection("Grades")
                 .addSnapshotListener(new EventListener<QuerySnapshot>() {
+                    @SuppressLint("NotifyDataSetChanged")
                     @Override
                     public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {
                         if(error!=null) {

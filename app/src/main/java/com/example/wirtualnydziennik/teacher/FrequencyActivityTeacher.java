@@ -64,16 +64,16 @@ public class FrequencyActivityTeacher extends AppCompatActivity implements AddFr
     @Override
     public void onNoteClickFrequency(int position, String userId) {
         list.get(position);
-        Intent intent = new Intent(this, EditFrequencyActivity.class);
-        sharedUserId(userId);
+        Intent intent = new Intent(this, UpdateFrequency.class);
+        sharedUserIdFrequency(userId);
         startActivity(intent);
 
     }
 
-    public void sharedUserId(String userId){
-        SharedPreferences sharedPreferences = getSharedPreferences("shared preferences teacher", MODE_PRIVATE);
+    public void sharedUserIdFrequency(String userId){
+        SharedPreferences sharedPreferences = getSharedPreferences("shared preferences teacher frequency", MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString("ID_TEACHER", userId);
+        editor.putString("ID_TEACHER_FREQUENCY", userId);
         editor.apply();
     }
 
