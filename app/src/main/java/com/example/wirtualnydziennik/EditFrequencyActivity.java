@@ -24,11 +24,11 @@ import java.util.ArrayList;
 
 public class EditFrequencyActivity extends AppCompatActivity implements EditFrequencyAdapter.OnEditFrequencyListener{
 
-    RecyclerView recyclerView;
-    FirebaseFirestore db;
+    private RecyclerView recyclerView;
+    private FirebaseFirestore db;
     private EditFrequencyAdapter myAdapter;
-    ArrayList<Frequency> list;
-    ProgressDialog progressDialog;
+    private ArrayList<Frequency> list;
+    private ProgressDialog progressDialog;
     private String userId;
 
     @Override
@@ -77,8 +77,8 @@ public class EditFrequencyActivity extends AppCompatActivity implements EditFreq
                 });
     }
     private String loadData() {
-        SharedPreferences sharedPreferences = getSharedPreferences("shared preferences teacher frequency", MODE_PRIVATE);
-        return sharedPreferences.getString("ID_TEACHER_FREQUENCY", "keAu1gFOwuROIjWJvS1nWtKBXya2");
+        SharedPreferences sharedPreferences = getSharedPreferences("Shared Preferences Student ID", MODE_PRIVATE);
+        return sharedPreferences.getString("STUDENT_LOGGED_ID", "keAu1gFOwuROIjWJvS1nWtKBXya2");
     }
 
     @Override

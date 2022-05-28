@@ -3,6 +3,7 @@ package com.example.wirtualnydziennik.teacher;
 import static android.content.ContentValues.TAG;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -35,8 +36,8 @@ public class UpdateFrequency extends AppCompatActivity {
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
     private String userId, dateString, dayOfWeekString,
             numberLessonString, statusString, teacherString, timeString;
-    Context context = getApplicationContext();
-    int duration = Toast.LENGTH_SHORT;
+    private Context context;
+    private int duration = Toast.LENGTH_LONG;
 
 
     @Override
@@ -44,6 +45,7 @@ public class UpdateFrequency extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_frequency);
         initVariables();
+        context = getApplicationContext();
         userId = loadData();
         initVariables();
         getDataFromUser();
@@ -64,7 +66,7 @@ public class UpdateFrequency extends AppCompatActivity {
                     teacherString = teacher.getText().toString();
                     timeString = time.getText().toString();
                     updateDb();
-                    Toast.makeText(context, "SUCCESS", duration);
+                    Toast.makeText(context, "SUCCESS", duration).show();
                 }
             });
         } else {
@@ -73,7 +75,8 @@ public class UpdateFrequency extends AppCompatActivity {
     }
 
     private String loadData() {
-        return "SfzLVwYSwVTARU3DLqIOhBNrEga2";
+        SharedPreferences sharedPreferences = getSharedPreferences("shared preferences teacher frequency", MODE_PRIVATE);
+        return sharedPreferences.getString("ID_TEACHER_NOTE", "keAu1gFOwuROIjWJvS1nWtKBXya2");
     }
 
     private void updateDb(){

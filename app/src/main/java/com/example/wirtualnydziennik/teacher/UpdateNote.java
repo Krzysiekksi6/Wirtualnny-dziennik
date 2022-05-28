@@ -3,6 +3,7 @@ package com.example.wirtualnydziennik.teacher;
 import static android.content.ContentValues.TAG;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -32,8 +33,8 @@ public class UpdateNote extends AppCompatActivity {
     private Button confirmButton;
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
     private String userId, categoryString, contentString, dateString, teacherString;
-    private Context context = getApplicationContext();
-    private int duration = Toast.LENGTH_SHORT;
+    private Context context;
+    private int duration = Toast.LENGTH_LONG;
 
 
 
@@ -43,6 +44,7 @@ public class UpdateNote extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_note);
+        context = getApplicationContext();
         userId = loadData();
         initVariables();
         getDataFromUser();
@@ -62,7 +64,7 @@ public class UpdateNote extends AppCompatActivity {
                     dateString = date.getText().toString();
                     teacherString = teacher.getText().toString();
                     updateDb();
-                    Toast.makeText(context, "SUCCESS", duration);
+                    Toast.makeText(context, "SUCCESS", duration).show();
                 }
             });
         } else {
@@ -92,11 +94,10 @@ public class UpdateNote extends AppCompatActivity {
                 });
     }
 
-    //TODO userID
     private String loadData() {
-        return "SfzLVwYSwVTARU3DLqIOhBNrEga2";
+        SharedPreferences sharedPreferences = getSharedPreferences("shared preferences teacher note", MODE_PRIVATE);
+        return sharedPreferences.getString("ID_TEACHER_NOTE", "keAu1gFOwuROIjWJvS1nWtKBXya2");
     }
-
     private void initVariables() {
         String currentDate = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(new Date());
         date = findViewById(R.id.tvDateNote);

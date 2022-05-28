@@ -70,9 +70,9 @@ public class NoteActivityTeacher extends AppCompatActivity implements AddNotesAd
     }
 
     public void sharedUserId(String userId){
-        SharedPreferences sharedPreferences = getSharedPreferences("shared preferences teacher", MODE_PRIVATE);
+        SharedPreferences sharedPreferences = getSharedPreferences("shared preferences teacher note", MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString("ID_TEACHER", userId);
+        editor.putString("ID_TEACHER_NOTE", userId);
         editor.apply();
     }
 }

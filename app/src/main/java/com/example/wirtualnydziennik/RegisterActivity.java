@@ -36,7 +36,7 @@ public class RegisterActivity extends AppCompatActivity {
     private RadioButton studentBut;
     private RadioButton profBut;
     private String status = null;
-    private static final String USER = "user";
+    private static final String USER = "users";
 
 
     @Override
@@ -76,7 +76,7 @@ public class RegisterActivity extends AppCompatActivity {
                 String location = locationEditText.getText().toString();
                 String phoneNumber = phoneEditText.getText().toString();
 
-                 //user = new User(email,password,firstName,lastName,location,phoneNumber,isProfessor);
+                user = new User(email,password,firstName,lastName,location,phoneNumber,isProfessor);
                 registerUser(email,password);
 
 
@@ -109,7 +109,7 @@ public class RegisterActivity extends AppCompatActivity {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d("sucess", "signInWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
-                            updateUI(user);
+                            //updateUI(user);
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w("Failed", "signInWithEmail:failure", task.getException());
