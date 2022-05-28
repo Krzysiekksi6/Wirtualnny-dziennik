@@ -147,9 +147,9 @@ public class MainActivityList extends AppCompatActivity {
             }else if(titleArray[position].equalsIgnoreCase("Grades")){
                 imageView.setImageResource(R.drawable.grade_logo);
             }else if (titleArray[position].equalsIgnoreCase("Note")) {
-                imageView.setImageResource(R.drawable.books_logo);
+                imageView.setImageResource(R.drawable.note);
             } else if (titleArray[position].equalsIgnoreCase("Frequency")) {
-                imageView.setImageResource(R.drawable.grade_logo);
+                imageView.setImageResource(R.drawable.fr);
             }
             else{
                 imageView.setImageResource(R.drawable.faqs);
