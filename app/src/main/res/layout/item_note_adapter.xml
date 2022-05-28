@@ -7,7 +7,7 @@
     android:layout_margin="16dp">
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="379dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:orientation="vertical">
@@ -24,7 +24,7 @@
                 android:text="Category :"
                 android:textColor="@color/black"
                 android:textSize="26sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tvCategoryNoteStudent"
@@ -36,6 +36,7 @@
                 android:textSize="20sp" />
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -48,7 +49,7 @@
                 android:text="Content :"
                 android:textColor="@color/black"
                 android:textSize="26sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tvContentNoteStudent"
@@ -60,7 +61,6 @@
                 android:textSize="20sp" />
 
         </LinearLayout>
-
 
 
         <LinearLayout
@@ -75,7 +75,7 @@
                 android:text="Date:"
                 android:textColor="@color/black"
                 android:textSize="26sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tvDateNoteStudent"
@@ -87,6 +87,7 @@
                 android:textSize="20sp" />
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -99,7 +100,7 @@
                 android:text="Teacher Name : "
                 android:textColor="@color/black"
                 android:textSize="26sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tvTeacherNameNoteStudent"
@@ -111,9 +112,6 @@
                 android:textSize="20sp" />
 
         </LinearLayout>
-
-
-
 
 
     </LinearLayout>
