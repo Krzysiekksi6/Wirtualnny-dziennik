@@ -10,6 +10,8 @@
     <color name="textColor">#FFF</color>
     <color name="barColor">#320b86</color>
     <color name="lightGray">#4444</color>
+    <color name="bg_activity">#673AB7</color>
+    <color name="btn_activity">#3EB489</color>
 
     <string-array name="colors" translatable="false">
         <item>#99cc00</item>
