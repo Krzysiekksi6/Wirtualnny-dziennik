@@ -76,7 +76,7 @@ public class UpdateFrequency extends AppCompatActivity {
 
     private String loadData() {
         SharedPreferences sharedPreferences = getSharedPreferences("shared preferences teacher frequency", MODE_PRIVATE);
-        return sharedPreferences.getString("ID_TEACHER_NOTE", "keAu1gFOwuROIjWJvS1nWtKBXya2");
+        return sharedPreferences.getString("ID_TEACHER_FREQUENCY", "keAu1gFOwuROIjWJvS1nWtKBXya2");
     }
 
     private void updateDb(){
@@ -115,6 +115,10 @@ public class UpdateFrequency extends AppCompatActivity {
         dayOfWeek = findViewById(R.id.tvCurrentDayFrequency);
         date = findViewById(R.id.tvCurrentDateFrequency);
         date.setText(currentDate);
+        enterStatus = findViewById(R.id.editTextStatus);
+        enterLesson = findViewById(R.id.editTextSelectLesson);
+        enterTime = findViewById(R.id.editTextTeacherName);
+        enterTeacherName = findViewById(R.id.editTextTimeFrequency);
         dayOfWeek.setText(currentDayOfWeek.substring(0,1).toUpperCase(Locale.ROOT) + currentDayOfWeek.substring(1).toLowerCase(Locale.ROOT));
 
     }

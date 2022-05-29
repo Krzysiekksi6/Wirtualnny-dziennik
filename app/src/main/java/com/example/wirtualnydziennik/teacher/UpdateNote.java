@@ -59,10 +59,10 @@ public class UpdateNote extends AppCompatActivity {
             confirmButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    categoryString = category.getText().toString();
-                    contentString = content.getText().toString();
+                    categoryString = enterCategory.getText().toString();
+                    contentString = enterContent.getText().toString();
                     dateString = date.getText().toString();
-                    teacherString = teacher.getText().toString();
+                    teacherString = enterTeacherName.getText().toString();
                     updateDb();
                     Toast.makeText(context, "SUCCESS", duration).show();
                 }
@@ -108,6 +108,9 @@ public class UpdateNote extends AppCompatActivity {
         enterContent = findViewById(R.id.editTextContentNote);
         enterTeacherName = findViewById(R.id.editTextTeacherNameNote);
         confirmButton = findViewById(R.id.confirm_button_note);
+        enterCategory = findViewById(R.id.editTextCategoryNote);
+        enterContent = findViewById(R.id.editTextContentNote);
+        enterTeacherName = findViewById(R.id.editTextTeacherNameNote);
         date.setText(currentDate);
     }
 }
