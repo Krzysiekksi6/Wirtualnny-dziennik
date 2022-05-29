@@ -1,0 +1,27 @@
+-op.plKonto Testowe:
+Login: email-testowy@gmail.com
+Password: password
+ID: keAu1gFOwuROIjWJvS1nWtKBXya2
+
+Konta uczniów:
+
+Login: jakub-fik@gmail.com
+Password: password
+ID: pDKwTwX1F4TZM1ipxZVHrJxJc7q2
+
+Login: krzysiek-ksiazek@op.pl
+Password: password
+ID: SfzLVwYSwVTARU3DLqIOhBNrEga2
+
+Login: daniel-sikora@gmail.com
+Password: password
+ID: ofi8vIGEPTc4S9u5I3BUAvt5A3y1
+
+Konta profesorów:
+
+Login: profesor-anstar@edu.pl
+Password: password
+ID: VUFQRD69UCcGmUyQCKSbeAnFGTi2
+
+
+

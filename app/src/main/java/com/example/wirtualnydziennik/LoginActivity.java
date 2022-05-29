@@ -1,11 +1,8 @@
 package com.example.wirtualnydziennik;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -14,41 +11,44 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.wirtualnydziennik.student.MainActivityList;
+import com.example.wirtualnydziennik.teacher.MainActivityTeacher;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
+
+/**
+ * Klasa obslugujaca Logike Logowania do Aplikacji
+ * Uprawnienia: Uczen i Profesor
+ */
 
 public class LoginActivity extends AppCompatActivity {
     private TextView titleTextView, registerTextView, forgotPasswordTextView;
     private ImageView logoImageView;
     private Button loginButton;
+    private Button registerButton;
     private EditText userEditText, passwordEditText;
     private FirebaseAuth mAuth;
+    private String userId;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        titleTextView = findViewById(R.id.title_text_view);
-        registerTextView = findViewById(R.id.register_text_view);
         forgotPasswordTextView = findViewById(R.id.forgot_password_text_view);
         logoImageView = findViewById(R.id.avatar_image_view);
         loginButton = findViewById(R.id.login_button);
         userEditText = findViewById(R.id.user_edit_text);
         passwordEditText = findViewById(R.id.password_edit_text);
         mAuth = FirebaseAuth.getInstance();
-
-
-//        FirebaseDatabase database = FirebaseDatabase.getInstance();
-//        DatabaseReference myRef = database.getReference("message");
-//
-//        myRef.setValue("Hello, World!");
-
+        registerButton = findViewById(R.id.reg_button);
 
 
         loginButton.setOnClickListener(new View.OnClickListener() {
@@ -58,7 +58,6 @@ public class LoginActivity extends AppCompatActivity {
                 String username = userEditText.getText().toString();
                 String password = passwordEditText.getText().toString();
 
-
                 mAuth.signInWithEmailAndPassword(username, password)
                         .addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
                             @Override
@@ -67,7 +66,16 @@ public class LoginActivity extends AppCompatActivity {
                                     // Sign in success, update UI with the signed-in user's information
                                     Log.d("sucess", "signInWithEmail:success");
                                     FirebaseUser user = mAuth.getCurrentUser();
-                                    updateUI(user);
+                                    userId = mAuth.getCurrentUser().getUid();
+                                    sharedUserId(userId);
+                                    //updateUI(user);
+                                    if (username.equals("profesor-anstar@edu.pl")) {
+                                        Intent intent = new Intent(LoginActivity.this, MainActivityTeacher.class);
+                                        startActivity(intent);
+                                    } else {
+                                        Intent intent = new Intent(LoginActivity.this, MainActivityList.class);
+                                        startActivity(intent);
+                                    }
                                 } else {
                                     // If sign in fails, display a message to the user.
                                     String asd = "fail";
@@ -80,10 +88,16 @@ public class LoginActivity extends AppCompatActivity {
                         });
             }
         });
+
+        registerButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+            Intent intent = new Intent(LoginActivity.this,RegisterActivity.class);
+            startActivity(intent);
+            }
+
+        });
     }
-
-
-
 
     @Override
     protected void onStart() {
@@ -94,14 +108,22 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
-    public void updateUI(FirebaseUser currentUser) {
-        Intent profileIntent = new Intent(this, MainActivity2.class);
-        profileIntent.putExtra("email", currentUser.getEmail());
-        startActivity(profileIntent);
-        //TODO check (isStudent? or isProfessor?)
-        if (currentUser.getEmail().equals("profesor")) {
+//    public void updateUI(FirebaseUser currentUser) {
+//        Intent profileIntent = new Intent(this, RegisterActivity.class);
+//        profileIntent.putExtra("email", currentUser.getEmail());
+//        startActivity(profileIntent);
+//        //TODO check (isStudent? or isProfessor?)
+//        if (currentUser.getEmail().equals("profesor")) {
+//
+//        }
+//    }
 
-        }
+    public void sharedUserId(String userId){
+        SharedPreferences sharedPreferences = getSharedPreferences("Shared Preferences Student ID", MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("STUDENT_LOGGED_ID", userId);
+        editor.apply();
     }
+
 }
 

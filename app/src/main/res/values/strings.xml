@@ -1,3 +1,286 @@
 <resources>
     <string name="app_name">Wirtualny dziennik</string>
+    <string name="faq_title">FAQ</string>
+
+    <string name="faq_first">Kiedy rozpoczyna sie semestr zimowy? <br> </br> - Zgodnie z Zarządzeniem nr 58/2021/2022 Rektora ANS Tarnow semestr
+    zimowy rozpoczyna sie z dniem 01.10.2021 roku.</string>
+
+    <string name="faq_second">Gdzie nalezy złozyc wniosek o wpis warunkowy ? <br> </br> - Zgodnie z Wytycznymi pani Rektor
+        wnioski o wpisy warunkowe kierujemy do dziekanatu danego wydzialu. </string>
+
+    <string name="faq_third">Czy od letniego semestru obowiazuja maseczki podczas zajec? <br> </br> - Zgodnie z Zarządzeniem nr 80/2021/2022 Rektora ANS Tarnow
+    od semestru letniego 2021/2022 nie ma obowiazku noszenia maseczek </string>
+
+    <string name="faq_fourth">Jaka jest maksymalna liczba studentow na kierunku Informatyka ? <br> </br> - Zgodnie z Zarządzeniem nr 24/2019/2020 Rektora ANS Tarnow
+    na kierunku Informatyka jest 120 miejsc.</string>
+
+    <string-array name="Main_Student">
+        <item>Timetable</item>
+        <item>Subjects</item>
+        <item>Grades</item>
+        <item>Note</item>
+        <item>Frequency</item>
+        <item>FAQ</item>
+    </string-array>
+
+    <string-array name="Description_Student">
+        <item>Current schedule of classes</item>
+        <item>Course list and syllabuses</item>
+        <item>Check your Grades!</item>
+        <item>Check your Note! Naughty</item>
+        <item>Check your Frequency!</item>
+        <item>Frequently Asked Questions our institution</item>
+    </string-array>
+
+    <string-array name="Main_Teacher">
+        <item>Timetable</item>
+        <item>Note</item>
+        <item>Grades</item>
+        <item>Frequency</item>
+        <item>FAQ</item>
+    </string-array>
+
+    <string-array name="Description_Teacher">
+        <item>Your current schedule</item>
+        <item>Note in the journal</item>
+        <item>Add grades to your students</item>
+        <item>Add frequency to your students</item>
+        <item>Frequently Asked Questions our institution</item>
+    </string-array>
+
+
+    <string-array name="Week">
+        <item>Monday </item>
+        <item>Tuesday </item>
+        <item>Wednesday </item>
+        <item>Thursday </item>
+        <item>Friday </item>
+    </string-array>
+
+    <string-array name="Monday">
+        <item>Linear Algebra</item>
+        <item>Numerical Methods in Technical Calculations</item>
+        <item>Dynamic Systems Modelling</item>
+        <item>Algorithms and Data Structures</item>
+        <item>Programming of Mobile Systems</item>
+        <item>Big Data and Data Warehouses</item>
+    </string-array>
+    <string-array name="Tuesday">
+        <item>Web Technologies</item>
+        <item>Operations Research</item>
+        <item>Programming of Distributed Systems II</item>
+        <item>Linear Algebra</item>
+        <item>Algorithms and Data Structures</item>
+        <item>WF</item>
+    </string-array>
+    <string-array name="Wednesday">
+        <item>Programming of Mobile Systems</item>
+        <item>Programming of Mobile Systems</item>
+        <item>Numerical Methods in Technical Calculations</item>
+        <item>Mathematical Analysis</item>
+        <item>Dynamic Systems Modelling</item>
+        <item>Dynamic Systems Modelling</item>
+
+    </string-array>
+    <string-array name="Thursday">
+        <item>Web Technologies</item>
+        <item>Operations Research</item>
+        <item>Programming of Distributed Systems II</item>
+        <item>Linear Algebra</item>
+        <item>Algorithms and Data Structures</item>
+        <item>WF</item>
+    </string-array>
+    <string-array name="Friday">
+        <item>Linear Algebra</item>
+        <item>Numerical Methods in Technical Calculations</item>
+        <item>Dynamic Systems Modelling</item>
+        <item>Algorithms and Data Structures</item>
+        <item>Programming of Mobile Systems</item>
+        <item>Big Data and Data Warehouses</item>
+    </string-array>
+
+    <string-array name="time1">
+        <item>8:55AM - 9:50AM</item>
+        <item>9:50AM - 10:45AM</item>
+        <item>10:45AM - 11:15AM</item>
+        <item>11:15AM - 1:05PM</item>
+        <item>1:05PM - 2:00PM</item>
+        <item>2:00PM - 2:55PM</item>
+        <item>2:55PM - 4:45PM</item>
+    </string-array>
+
+    <string-array name="time2">
+        <item>8:55AM - 9:50AM</item>
+        <item>9:50AM - 10:45AM</item>
+        <item>10:45AM - 11:15AM</item>
+        <item>11:15AM - 12:10PM</item>
+        <item>12:10PM - 1:05PM</item>
+        <item>1:05PM - 2:00PM</item>
+        <item>2:00PM - 3:50PM</item>
+    </string-array>
+
+    <string-array name="time3">
+        <item>8:55AM - 9:50AM</item>
+        <item>9:50AM - 10:45AM</item>
+        <item>10:45AM - 11:15AM</item>
+        <item>11:15AM - 12:10PM</item>
+        <item>12:10PM - 1:05PM</item>
+        <item>1:05PM - 2:00PM</item>
+        <item>2:00PM - 3:50PM</item>
+    </string-array>
+
+    <string-array name="time4">
+        <item>8:55AM - 9:50AM</item>
+        <item>9:50AM - 10:45AM</item>
+        <item>10:45AM - 11:15AM</item>
+        <item>11:15AM - 12:10PM</item>
+        <item>12:10PM - 1:05PM</item>
+        <item>1:05PM - 2:00PM</item>
+        <item>2:00PM - 3:50PM</item>
+    </string-array>
+
+    <string-array name="time5">
+        <item>8:55AM - 10:45AM</item>
+        <item>10:45AM - 11:15AM</item>
+        <item>11:15AM - 12:10PM</item>
+        <item>12:10PM - 1:05PM</item>
+        <item>1:05PM - 2:00PM</item>
+        <item>2:00PM - 3:50PM</item>
+    </string-array>
+
+    <string-array name="Subjects">
+        <item>Algorithms and Data Structures</item>
+        <item>Linear Algebra</item>
+        <item>Numerical Methods in Technical Calculations</item>
+        <item>Dynamic Systems Modelling</item>
+        <item>Programming of Mobile Systems</item>
+        <item>Big Data and Data Warehouses</item>
+        <item>Web Technologies</item>
+        <item>Operation Research</item>
+        <item>Programming of Distributed Systems II</item>
+        <item>WF</item>
+        <item>Mathematical Analysis</item>
+    </string-array>
+
+    <string-array name="Algorithms">
+        <item>Knows and understands the basics of algorithmics.</item>
+        <item>Can design basic algorithms, understands the specificity of individual data structures. </item>
+        <item>He/she is ready to serve the society with his/her knowledge and skills in the field of algorithms and data structures, as well as to cooperate in a group and is aware of the need of continuous self-education and self-improvement.</item>
+        <item>Is ready to respond to the needs and challenges contemporary society with his/her competent and patriotic attitude.</item>
+        <item> Basic knowledge of discrete mathematics in terms of set algebra and relational algebra.</item>
+        <item>Aho A.V., Hopcroft J.E., Ullman J.D., Projektowanie i analiza algorytmów komputerowych, PWN 1983</item>
+        <item>Wirth N., Algorytmy + struktury danych = programy, WNT</item>
+    </string-array>
+
+    <string-array name="Algebra">
+        <item>Knows and understands mathematical and physical theories and methods used in computer science. </item>
+        <item>Uses the known methods and mathematical models, as well as computer simulations computer simulations to analyze</item>
+        <item> Solves problems under changing and not fully predictable.</item>
+        <item>He is ready to critically evaluate the effects of his work and to recognize knowledge in solving cognitive and practical problems</item>
+        <item>The concept of complex numbers and operations on them are introduced.</item>
+        <item>T. Jurlewicz, Z. Skoczylas, Algebra liniowa 1. Definicje, twierdzenia, wzory, Oficyna Wydawnicza GiS, Wrocław 2006</item>
+        <item>T. Jurlewicz, Z. Skoczylas, Algebra liniowa 2. Definicje, twierdzenia, wzory, Oficyna Wydawnicza GiS, Wrocław 2005</item>
+    </string-array>
+
+    <string-array name="Numerical_Methods">
+        <item>Knows topics in mathematics including linear algebra, analysis, differential equations</item>
+        <item>He knows basic algorithms and numerical methods, he can compare these methods and determine the conditions of superiority of one over another.</item>
+        <item>Knows their applicability to engineering problems.</item>
+        <item>Be able to write and implement algorithms for calculating solutions to technical problems. </item>
+        <item>He/she can analyze issues of numerical methods in terms of The student is able to analyze issues of numerical methods</item>
+        <item>J.Kiusalaas, Numerical Methods in Engineering with MATLAB, Cambridge University Press 2010</item>
+        <item>J. Stoer, Wstęp do metod numerycznych, t. 1, PWN, Warszawa 1979</item>
+    </string-array>
+
+    <string-array name="Dynamic_Systems">
+        <item>Knows topics in mathematics including linear algebra, analysis, differential equations</item>
+        <item>He knows basic algorithms and numerical methods, he can compare these methods and determine the conditions of superiority of one over another.</item>
+        <item>Knows their applicability to engineering problems.</item>
+        <item>Be able to write and implement algorithms for calculating solutions to technical problems. </item>
+        <item>He/she can analyze issues of numerical methods in terms of The student is able to analyze issues of numerical methods</item>
+        <item>J.Kiusalaas, Numerical Methods in Engineering with MATLAB, Cambridge University Press 2010</item>
+        <item>J. Stoer, Wstęp do metod numerycznych, t. 1, PWN, Warszawa 1979</item>
+    </string-array>
+
+    <string-array name="Mobile_Programing">
+        <item>Knows topics in mathematics including linear algebra, analysis, differential equations</item>
+        <item>He knows basic algorithms and numerical methods, he can compare these methods and determine the conditions of superiority of one over another.</item>
+        <item>Knows their applicability to engineering problems.</item>
+        <item>Be able to write and implement algorithms for calculating solutions to technical problems. </item>
+        <item>He/she can analyze issues of numerical methods in terms of The student is able to analyze issues of numerical methods</item>
+        <item>J.Kiusalaas, Numerical Methods in Engineering with MATLAB, Cambridge University Press 2010</item>
+        <item>J. Stoer, Wstęp do metod numerycznych, t. 1, PWN, Warszawa 1979</item>
+    </string-array>
+
+    <string-array name="Big_Data">
+        <item>Knows topics in mathematics including linear algebra, analysis, differential equations</item>
+        <item>He knows basic algorithms and numerical methods, he can compare these methods and determine the conditions of superiority of one over another.</item>
+        <item>Knows their applicability to engineering problems.</item>
+        <item>Be able to write and implement algorithms for calculating solutions to technical problems. </item>
+        <item>He/she can analyze issues of numerical methods in terms of The student is able to analyze issues of numerical methods</item>
+        <item>J.Kiusalaas, Numerical Methods in Engineering with MATLAB, Cambridge University Press 2010</item>
+        <item>J. Stoer, Wstęp do metod numerycznych, t. 1, PWN, Warszawa 1979</item>
+    </string-array>
+
+    <string-array name="Web_Technoliges">
+        <item>Knows topics in mathematics including linear algebra, analysis, differential equations</item>
+        <item>He knows basic algorithms and numerical methods, he can compare these methods and determine the conditions of superiority of one over another.</item>
+        <item>Knows their applicability to engineering problems.</item>
+        <item>Be able to write and implement algorithms for calculating solutions to technical problems. </item>
+        <item>He/she can analyze issues of numerical methods in terms of The student is able to analyze issues of numerical methods</item>
+        <item>J.Kiusalaas, Numerical Methods in Engineering with MATLAB, Cambridge University Press 2010</item>
+        <item>J. Stoer, Wstęp do metod numerycznych, t. 1, PWN, Warszawa 1979</item>
+    </string-array>
+
+    <string-array name="Operation_Research">
+        <item>Knows topics in mathematics including linear algebra, analysis, differential equations</item>
+        <item>He knows basic algorithms and numerical methods, he can compare these methods and determine the conditions of superiority of one over another.</item>
+        <item>Knows their applicability to engineering problems.</item>
+        <item>Be able to write and implement algorithms for calculating solutions to technical problems. </item>
+        <item>He/she can analyze issues of numerical methods in terms of The student is able to analyze issues of numerical methods</item>
+        <item>J.Kiusalaas, Numerical Methods in Engineering with MATLAB, Cambridge University Press 2010</item>
+        <item>J. Stoer, Wstęp do metod numerycznych, t. 1, PWN, Warszawa 1979</item>
+    </string-array>
+
+    <string-array name="Distributed_Systems">
+        <item>Knows topics in mathematics including linear algebra, analysis, differential equations</item>
+        <item>He knows basic algorithms and numerical methods, he can compare these methods and determine the conditions of superiority of one over another.</item>
+        <item>Knows their applicability to engineering problems.</item>
+        <item>Be able to write and implement algorithms for calculating solutions to technical problems. </item>
+        <item>He/she can analyze issues of numerical methods in terms of The student is able to analyze issues of numerical methods</item>
+        <item>J.Kiusalaas, Numerical Methods in Engineering with MATLAB, Cambridge University Press 2010</item>
+        <item>J. Stoer, Wstęp do metod numerycznych, t. 1, PWN, Warszawa 1979</item>
+    </string-array>
+
+    <string-array name="WF">
+        <item>Knows topics in mathematics including linear algebra, analysis, differential equations</item>
+        <item>He knows basic algorithms and numerical methods, he can compare these methods and determine the conditions of superiority of one over another.</item>
+        <item>Knows their applicability to engineering problems.</item>
+        <item>Be able to write and implement algorithms for calculating solutions to technical problems. </item>
+        <item>He/she can analyze issues of numerical methods in terms of The student is able to analyze issues of numerical methods</item>
+        <item>J.Kiusalaas, Numerical Methods in Engineering with MATLAB, Cambridge University Press 2010</item>
+        <item>J. Stoer, Wstęp do metod numerycznych, t. 1, PWN, Warszawa 1979</item>
+    </string-array>
+
+    <string-array name="Mathematical_Analysis">
+        <item>Knows topics in mathematics including linear algebra, analysis, differential equations</item>
+        <item>He knows basic algorithms and numerical methods, he can compare these methods and determine the conditions of superiority of one over another.</item>
+        <item>Knows their applicability to engineering problems.</item>
+        <item>Be able to write and implement algorithms for calculating solutions to technical problems. </item>
+        <item>He/she can analyze issues of numerical methods in terms of The student is able to analyze issues of numerical methods</item>
+        <item>J.Kiusalaas, Numerical Methods in Engineering with MATLAB, Cambridge University Press 2010</item>
+        <item>J. Stoer, Wstęp do metod numerycznych, t. 1, PWN, Warszawa 1979</item>
+    </string-array>
+
+    <string-array name="titles">
+        <item>Unit1</item>
+        <item>Unit2</item>
+        <item>Unit3</item>
+        <item>Unit4</item>
+        <item>Unit5</item>
+        <item> Recommended books </item>
+        <item> Other books </item>
+    </string-array>
+
+
 </resources>

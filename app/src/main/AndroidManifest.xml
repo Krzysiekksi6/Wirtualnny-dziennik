@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.wirtualnydziennik">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,13 +12,76 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WirtualnyDziennik">
         <activity
-            android:name=".MainActivity2"
+            android:name=".teacher.UpdateNote"
+            android:exported="false" />
+        <activity
+            android:name=".teacher.UpdateFrequency"
+            android:exported="false" />
+        <activity
+            android:name=".EditNotesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EditFrequencyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FrequencyActivityStudent"
+            android:exported="false" />
+        <activity
+            android:name=".NoteActivityStudnet"
+            android:exported="false" />
+        <activity
+            android:name=".teacher.UpdateStudentGrade"
+            android:exported="false" />
+        <activity
+            android:name=".teacher.EditGradesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".userList"
+            android:exported="false" />
+        <activity
+            android:name=".teacher.GradesActivityTeacher"
+            android:exported="false" />
+        <activity
+            android:name=".teacher.FrequencyActivityTeacher"
+            android:exported="false" />
+        <activity
+            android:name=".teacher.NoteActivityTeacher"
+            android:exported="false" />
+        <activity
+            android:name=".GradesActivity"
             android:exported="true" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".model.SubjectDetail"
+            android:exported="true" />
+        <activity
+            android:name=".student.SubjectActivity"
+            android:exported="true" />
+        <activity
+            android:name=".PrintAllStudents"
+            android:exported="false" />
+        <activity
+            android:name=".AddStudentActivity"
+            android:exported="true" />
+        <activity
+            android:name=".model.DayDetail"
             android:exported="true" />
         <activity
             android:name=".RegisterActivity"
+            android:exported="true" />
+        <activity
+            android:name=".student.WeekActivity"
+            android:exported="true" />
+        <activity
+            android:name=".student.MainActivityList"
+            android:exported="true" />
+        <activity
+            android:name=".FaqActivity"
+            android:exported="true" />
+        <activity
+            android:name=".teacher.MainActivityTeacher"
+            android:exported="true" />
+        <activity
+            android:name=".LoginActivity"
             android:exported="true" />
         <activity
             android:name=".MainActivity"

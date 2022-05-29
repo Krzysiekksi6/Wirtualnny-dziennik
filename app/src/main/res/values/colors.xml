@@ -9,4 +9,20 @@
     <color name="white">#FFFFFFFF</color>
     <color name="textColor">#FFF</color>
     <color name="barColor">#320b86</color>
+    <color name="lightGray">#4444</color>
+    <color name="bg_activity">#673AB7</color>
+    <color name="btn_activity">#3EB489</color>
+
+    <string-array name="colors" translatable="false">
+        <item>#99cc00</item>
+        <item>#547bca</item>
+        <item>#ff4444</item>
+        <item>#9933cc</item>
+        <item>#33b5e5</item>
+        <item>#df5948</item>
+        <item>#669900</item>
+        <item>#cc0000</item>
+        <item>#ff8800</item>
+        <item>#aeb857</item>
+    </string-array>
 </resources>

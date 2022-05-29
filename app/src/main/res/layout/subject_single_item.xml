@@ -1,0 +1,36 @@
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="4dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.example.wirtualnydziennik.Utils.LetterImageView
+            android:id="@+id/ivLetterSubject"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvSubject"
+            android:layout_marginLeft="6dp"
+            android:text="Subject"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:layout_toRightOf="@id/ivLetterSubject"
+            android:layout_alignTop="@id/ivLetterSubject"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

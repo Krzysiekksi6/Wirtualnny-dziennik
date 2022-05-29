@@ -1,0 +1,43 @@
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="4dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.example.wirtualnydziennik.Utils.LetterImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:id="@+id/ivDayDetails"
+            android:layout_margin="8dp"
+            />
+
+        <TextView
+            android:id="@+id/tvSubjectDayDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/ivDayDetails"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="6dp"
+            android:layout_toRightOf="@id/ivDayDetails"
+            android:text="Subjects"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvTimeDayDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tvSubjectDayDetails"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="41dp"
+            android:layout_marginBottom="-36dp"
+            android:text="Time" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

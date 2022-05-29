@@ -1,0 +1,14 @@
+package com.example.wirtualnydziennik;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+
+public class FrequencyActivityStudent extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_frequency_student);
+    }
+}
